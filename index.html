@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="Description" content="" />
+	<title>Шины!</title>
+	<link href='layout.css' rel="stylesheet" type="text/css" />
+	<link href='typography.css' rel="stylesheet" type="text/css" />
+	<!--[if lte IE 7]><link rel="stylesheet" type="text/css" href='ie.css' /><![endif]-->
+	<link rel="Shortcut Icon" type="image/x-icon" href="" />
+</head>
+<body>
+
+	<div id="wrapper">
+		<div id="header">
+			<div id="header-left"></div>
+			<img src="img/logo.png" id="logo"/>
+			<div style="color: #666;">Интернет-магазин автомобильных шин и колесных дисков</div>
+			<a href="http://www.voshod-k.ru/">www.voshod-k.ru</a>          <a href="mailto:voshod@voshod-avto.ru">voshod@voshod-avto.ru</a>
+			<div id="cart" class="empty">Пока ничего не заказано</div>
+			<div class="right">
+				Телефон для заказа и проверки наличия
+				<div id="phone">
+					<span class="code">(495) </span>335-40-10
+				</div>
+				<div id="search">
+					<input name="search" />
+					<a href="#" id="search-do">Найти</a>
+				</div>
+			</div>
+		</div>
+		<ul id="menu">
+			<li id="menu_actions"><div><a href="#">АКЦИИ и СКИДКИ</a></div></li>
+			<li id="menu_tire_cat" class="active"><div><a href="#">Каталог шин</a></div></li>
+			<li id="menu_disc_cat"><div><a href="#">Каталог дисков</a></div></li>
+			<li id="menu_from_model"><div><a href="#">Подбор шин и дисков по марке автомобиля</a></div></li>
+		</ul>
+		<ul id="menu2">
+			<li><div><a href="#">О компании</a></div></li>
+			<li><div class="hover"><a href="#">Варианты оплаты</a></div></li>
+			<li><div><a href="#">Доставка</a></div></li>
+			<li><div class="active"><a href="#">Шиномонтаж</a></div></li>
+			<li><div><a href="#">Сезонное хранение</a></div></li>
+			<li><div><a href="#">Варианты оплаты</a></div></li>
+			<li><div><a href="#">Скидки</a></div></li>
+			<li><div><a href="#">Акции</a></div></li>
+			<li><div><a href="#">Контакты</a></div></li>
+		</ul>
+		<div id="body">
+			<div id="selector_wrapper">
+				<div class="tabs">
+					<span class="title">Быстый подбор</span>
+					<div class="tab active"><div><a href="#">шин</a></div></div>
+					<div class="tab"><div><a href="#">дисков</a></div></div>
+					<div class="tab"><div><a href="#">по марке авто</a></div></div>
+				</div>
+				<div id="tire_selector">
+					<table>
+					<tr>
+						<td><img src="img/question.gif"></td>
+						<td>Ширина профиля, мм</td>
+						<td><select name="width">
+							<option value="205">205</option>
+							<option value="190">190</option>
+						</select></td>
+						<td>Производитель
+							<select name="creator" id="creator">
+							<option value="1">Bridgestone</option>
+							<option value="2" selected="selected">Continental</option>
+							<option value="3">Goodyear</option>
+							<option value="4">Firestone</option>
+							<option value="5">Michelin</option>
+							<option value="6">nokian Tyres</option>
+						</select></td>
+					</tr><tr>
+						<td><img src="img/question.gif"></td>
+						<td>Высота профиля, мм</td>
+						<td><select name="height">
+							<option value="75">75</option>
+							<option value="65">65</option>
+							<option value="55">55</option>
+							<option value="45">45</option>
+						</select></td>
+						<td>Цена от <input class="price" name="price_low" value="12345"/>
+							до <input class="price" name="price_high" value="99765"/> руб.</td>
+					</tr><tr>
+						<td><img src="img/question.gif"></td>
+						<td>Диаметр</td>
+						<td><select name="radius">
+							<option value="18">R18</option>
+							<option value="17">R17</option>
+							<option value="16">R16</option>
+							<option value="15">R15</option>
+						</select></td>
+						<td>
+							<div class="double_slider">
+								<div class="labels">
+									<div class="label" style="left: 51px;">10 000<div class="tick"></div></div>
+									<div class="label" style="left: 138px;">50 000<div class="tick"></div></div>
+									<div class="label" style="left: 214px;">100 000<div class="tick"></div></div>
+								</div>
+								<div class="knob knob-left" style="left: 50px;"></div>
+								<div class="knob knob-right" style="left: 210px;"></div>
+								<div class="bar" style="left: 58px; width: 152px;"></div>
+							</div>
+						</td>
+					</tr><tr>
+						<td><img src="img/question.gif"></td>
+						<td colspan="2">Сезон <div id="season">
+							<a class="season season_summer" href="#"></a>
+							<a class="season season_winter" href="#"></a>
+							<a class="season season_spikes active" href="#"></a>
+							<a class="season season_all" href="#"></a>
+						</div></td>
+						<td><a href="#" class="go">Подобрать шины</a></td>
+					</tr>
+					</table>
+				</div>
+			</div>
+			<div id="accordion">
+				<a class="panel" href="#">
+					<span class="label label_new">new</span>
+					<div class="text">Новые поступления шин Nokian</div>
+				</a>
+				<a class="panel" href="#">
+					<span class="label label_sale">sale</span>
+					<div class="text">Специальные цены на модели 2010 года</div>
+				</a>
+				<a class="panel active" href="#">
+					<span class="label label_hit">hit</span>
+					<div class="text">Монтаж по специальной цене</div>
+				</a>
+				<div class="view">
+					<div class="text">
+						<div style="font-size:36px;">Скидка 30%</div>
+						<div style="font-size:12px;">При записи на шиномонтаж за неделю и в утренние часы</div>
+					</div>
+				</div>
+				<a class="panel" href="#">
+					<span class="label label_new">new</span>
+					<div class="text">Новые поступления шин Mishelin</div>
+				</a>
+				<a class="panel" href="#">
+					<span class="label label_new">new</span>
+					<div class="text">Новые поступления дисков K&amp;K</div>
+				</a>
+				<a class="panel" href="#">
+					<span class="label label_sale">sale</span>
+					<div class="text">Специальные цены на литые диски</div>
+				</a>
+			</div>
+			<div id="news">
+				<h2>Новости</h2>
+				<a href="#" id="all_news">Посмотреть все новости</a>
+				<div class="piece_of_news important">
+					<div class="date">25 мая</div>
+					График работы региональных представительств магазина в период майских праздников
+				</div>
+				<div class="piece_of_news">
+					<div class="date">22 мая</div>
+					Yokohama начала реализацию первого этапа расширения производства на Филиппинах.
+				</div>
+				<div class="piece_of_news">
+					<div class="date">12 апреля</div>
+					11 форум Michelin Challenge Bibendum
+				</div>
+				<div class="piece_of_news">
+					<div class="date">3 апреля</div>
+					Открытие представительства в г.Казань
+				</div>
+			</div>
+			<div>
+				<h1>Заголовок H1  для главной страницы</h1>
+				<p>Движение ротора преобразует гироинтегратор, от чего сильно зависит величина систематического ухода гироскопа. Устойчивость перманентно искажает гравитационный крен, что явно следует из прецессионных уравнений движения. Нутация, в соответствии с основным законом динамики, апериодичен. <a href="#">Инерциальная навигация</a> интегрирует резонансный волчок, используя имеющиеся в этом случае первые интегралы. </p>
+				<p>Малое колебание даёт более простую систему дифференциальных уравнений, если исключить уход гироскопа, основываясь на предыдущих вычислениях. Время набора максимальной скорости методически переворачивает штопор, даже если не учитывать выбег гироскопа.</p>
+				<p>Сила трансформирует гироскоп, что обусловлено малыми углами карданового подвеса. Точность курса, в силу третьего закона Ньютона, требует большего внимания к анализу ошибок, которые даёт твердый гироскопический маятник, даже если рамки подвеса буду ориентированы под прямым углом. <a href="#">Последнее векторное равенство</a> заставляет перейти к более сложной системе дифференциальных уравнений, если добавить волчок, не забывая о том, что интенсивность диссипативных сил, характеризующаяся величиной коэффициента D, должна лежать в определённых пределах.</p>
+			</div>
+		</div>
+		<div id="footer">
+			<div style="float: left;">
+				Контактная информация:
+				<dl style="color:#7b7ca8;">
+					<dt>Телефон:</dt>  <dd>(495) <b>335 4010</b></dd>
+					<dt>E-mail:</dt>  <dd><a href="mailto:voshod@voshod-avto.ru">voshod@voshod-avto.ru</a></dd>
+				</dl>
+				<a href="#" style="color:#29a52f;">Контакты и схема проезда</a>
+			</div>
+			<div style="float: left;">
+				Время работы офисов:
+				<dl>
+					<dt>Пн-Пт:</dt>  <dd>с <b>9<sup>00</sup></b> до <b>17<sup>00</sup></b></dd>
+					<dt>Сб:</dt>  <dd>с <b>9<sup>00</sup></b> до <b>15<sup>00</sup></b></dd>
+					<dt>Вс:</dt>  <dd>выходной</dd>
+				</dl>
+			</div>
+			<span class="go_to_cart">Приём online-заказов через <a href="#">корзину</a> на сайте — круглосуточно и ежедневно.</span>
+			
+			<table>
+				<tr class="catalogs"><td colspan="2"><a href="#">Каталог автомобильных шин</a></td></tr>
+				<tr class="catalogs"><td colspan="2"><a href="#">Каталог автомобильных дисков</a></td></tr>
+				<tr><td colspan="2">&nbsp;</td></tr>
+				<tr class="menu_parts">	<td><a href="#">Шиномонтаж</a></td>
+																	<td><a href="#">Сезонное хранении</a></td></tr>
+				<tr class="menu_parts">	<td><a href="#">Варианты оплаты</a></td>
+																	<td><a href="#">Доставка</a></td></tr>
+			</table>
+	
+			<div><table class="more_menu_parts">
+				<tr><td></td><td><a href="#" >О компании</a></td><td><a href="#" >Вакансии</a></td></tr>
+				<tr><td></td><td><a href="#" >Контакты</a></td><td><a href="#" >Направления продаж</a></td></tr>
+				<tr><td style="color:#0e9627;">%</td><td><a href="#" >Скидки</a></td><td><a href="#" >Информация для клиентов</a></td></tr>
+				<tr><td style="color:#10acbe;">!!!</td><td><a href="#" >Акции</a></td><td><a href="#" >Бренды</a></td></tr>
+			</table></div>
+			<table style="width: 100%;"><tr>
+				<td class="copyright">© 2001— 2011, ООО «Восход-К Авто»</td>
+				<td class="disclaimer" style="">Вся информация на сайте носит справочный характер и не является публичной офертой.</td>
+				<td class="studio">Designed by <a href="#" class="name">PAIVE Media Group</a></td>
+			</tr></table>
+		</div>
+	</div>
+
+</body>
+</html>

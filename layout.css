@@ -1,0 +1,251 @@
+/*   Table of contents
+
+0. GLOBAL RESET [ +element style reset and minifixes ]
+1. BASE LAYOUT  [ LAYOUT. Style of all base elements like body, wrapper, header, content, extras, footer, etc. ]
+2. GLOBAL STYLE [ Global styles ]
+3. CONTENT      [ All elements fully relative to content and belong to it ]
+4. HEADER       [ Header, Logo, Header-Menu, etc ]
+5. FOOTER       [ Copyright, developers info etc ]
+
+(c) SublimeYe, 2011
+Skype: sublimeye
+
+--------------------------------*/
+
+/*   0. Global reset + holy shit ;)
+--------------------------------*/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,tt,var,dd,dl,dt,li,ol,ul,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;font-weight:inherit;font-style:inherit;vertical-align:baseline}
+input, button, textarea, select {margin: 0;font-size: 1em}
+table {border-collapse: collapse; border-spacing: 0}
+blockquote, q {quotes: none}
+dfn, i, cite, var, address, em {font-style: normal}
+th, b, strong, h1, h2, h3, h4, h5, h6 {font-weight: normal}
+
+/* CLEAR FIX*/
+.clearfix:after {content: ".";display: block;clear: both;visibility: hidden;line-height: 0;height: 0} 
+.clearfix {display: inline-block} 
+html[xmlns] .clearfix {display: block}
+
+a:focus {outline: none;}
+
+/*   1. Base layout
+--------------------------------*/
+
+/* sticky footer layout */
+#wrapper { margin: 20px}
+#header {position:relative; height: 130px; background:url('img/bg-head.png') top right; margin-left: 10px; }
+#logo { margin-top: 30px; }
+#cart { position:absolute; right: 400px; width: 20%; top: 15px; text-align:center; }
+#header-left {height: 130px; width: 70px; background:url('img/bg-head.png'); margin: 0 -55px 0 -10px; float:left;}
+#header .right {position:absolute; right: 15px; top: 15px; width: 250px; text-align:center;}
+#header #search { width: 244px; height: 26px; background:white; box-shadow: 2px 2px 2px -2px silver inset; margin: 10px 0 0 20px; }
+#header #search input { border: none; padding: 6px; width: 175px; background: transparent; }
+#search-do { padding-right: 15px; background:url('img/search.gif') no-repeat scroll right center; }
+
+/*   2. MENU
+--------------------------------*/
+#menu { display: block; width: 100%; }
+#menu li {
+	list-style-type: none; float: left;
+	line-height: 49px;
+	height: 51px;
+}
+#menu div {
+	background-color: #43468a;
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c50a2', endColorstr='#3b3d72',GradientType=0);
+	background: linear-gradient(top, #4c50a2, #3b3d72);
+	background: -o-linear-gradient(top, #4c50a2, #3b3d72);
+	background: -ms-linear-gradient(top, #4c50a2, #3b3d72);
+	background: -moz-linear-gradient(top, #4c50a2, #3b3d72);
+	background: -webkit-linear-gradient(top, #4c50a2, #3b3d72);
+	border: 1px solid #44478c;
+	border-color: #3b3d72 rgba(3, 13, 59, 0.18) #030d3b rgba(255, 255, 255, 0.12);
+	border-color: #3b3d72 #373b7b #030d3b #6669a0;
+}
+#menu a {
+	display: block;
+	padding: 20px 0 0;
+	margin-top: -20px;
+	background: url('img/menu_tires.png') left top no-repeat scroll;
+	bottom: 0;
+	position: relative;
+}
+#menu .active div {
+	background-color: #a93d3d;
+	background: linear-gradient(top, #c25b5b, #932222);
+	background: -o-linear-gradient(top, #c25b5b, #932222);
+	background: -ms-linear-gradient(top, #c25b5b, #932222);
+	background: -moz-linear-gradient(top, #c25b5b, #932222);
+	background: -webkit-linear-gradient(top, #c25b5b, #932222);
+	background: -webkit-linear-gradient(top, #c25b5b, #932222);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c25b5b', endColorstr='#932222',GradientType=0);
+	box-shadow: 2px 2px 4px -2px rgba(0, 0, 0, 0.2) inset;
+	border-color: #9d2e2e rgba(3, 13, 59, 0.18) #6e1313 rgba(255, 255, 255, 0.12);
+	border-color: #9d2e2e #89373f #6e1313 #b96161;
+}
+#menu_actions { width: 16%; }
+#menu_tire_cat { width: 19.5%; }
+#menu_disc_cat { width: 21.5%; }
+#menu_from_model { width: 43%; }
+#menu_tire_cat a { background-position: 20px -131px; padding-left: 95px; }
+#menu_disc_cat a { background-position: 20px -231px; padding-left: 95px; }
+#menu_from_model a { background-position: 20px -331px; padding-left: 115px; }
+
+#menu2 { clear: both; text-align: center; background: #fbfbfb; border: 1px solid white; border-bottom-color: #e4e3e3; }
+#menu2 li { list-style-type: none; display:inline-block; zoom: 1; *display: inline; }
+#menu2 a { display: block; line-height: 45px; }
+#menu2 div { padding: 0 7px; }
+#menu2 .active {
+	background-color: #f7f7f7;
+	box-shadow: 0 -30px 15px -15px #fcfcfc inset, 0 2px 2px silver inset;
+//	position: relative;
+//	top: 20px;
+//	margin-top: -20px;
+}
+#menu2 .active a { border-bottom: 3px solid #a53737; }
+
+/*   2. GLOBAL STYLE
+--------------------------------*/
+
+body { background:url('img/bg.gif') repeat top center; min-width: 1200px; }
+
+/*   3. CONTENT
+--------------------------------*/
+.tabs { margin-top: 15px; }
+.tabs .title { float: left; margin: 2px 0 0 24px; }
+.tabs .tab a { border-bottom: 1px dashed; display: block; margin: 0 8px 8px; border-color: #424586; }
+.tabs .tab { float: left; margin-left: 8px; }
+.tabs .active a {
+	border-color: #a83b3b; background: white; margin: -1px 7px 8px
+}
+.tabs .active {
+	background: white;
+	border: 1px solid #e5e5e5;
+	border-width: 1px 0 0 1px;
+	margin-bottom: -1px;
+}
+.tabs .active div {
+	border: 1px solid #f6f6f6;
+	border-width: 1px 0 0 1px;
+}
+
+#selector_wrapper { background:#f7f7f7; width: 50%; min-width: 530px; float: left; height: 259px; }
+#tire_selector { background:white; border: 1px solid #e5e5e5; border-width: 1px 0 0 1px; clear: both; height: 205px; }
+#tire_selector select { width: 60px; }
+#tire_selector #creator { width: auto; }
+#tire_selector table { margin-top: 20px; width: 100%; }
+#tire_selector td { padding: 0 5px; line-height: 40px; }
+#tire_selector .double_slider { position: relative; width: 243px; height: 1px; background: #8b8b8b; }
+#tire_selector .double_slider .label { position: absolute; width: 48px; margin-left: -24px; top: -20px; line-height: 16px; }
+#tire_selector .double_slider .tick { position: absolute; left: 0; width: 1px; height: 9px; background: #8b8b8b; margin-left: 24px;  }
+#tire_selector .double_slider .knob { position: absolute; width: 8px; height: 14px; background: url('img/knob.png'); cursor: pointer; cursor: hand; }
+#tire_selector .double_slider .knob-left { background-position: 0 0; }
+#tire_selector .double_slider .knob-right { background-position: -8px 0; }
+#tire_selector .double_slider .bar {
+	position: absolute; top: -2px; height: 5px;
+	background-color: #4f539d;
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#565aac', endColorstr='#3e417b',GradientType=0);
+	background: -o-linear-gradient(top, #565aac 0%,#3e417b 100%);
+	background: -ms-linear-gradient(top, #565aac 0%,#3e417b 100%);
+	background: -moz-linear-gradient(top, #565aac, #3e417b);
+	background: -webkit-linear-gradient(top, #565aac 0%,#3e417b 100%);
+	background: -webkit-gradient(linear, left center, right center, color-stop(0%,#565aac), color-stop(100%,#3e417b));
+	background: linear-gradient(top, #565aac 0%,#3e417b 100%);
+}
+#tire_selector .go{ padding-left: 40px; background: url('img/tire.png') left center no-repeat scroll; position: relative; top: 20px; }
+
+.price { width: 3.5em; border: 1px solid #bababa; border-radius: 2px; }
+
+#season { float: right; }
+#season .season { width: 31px; height: 31px; background-image: url('img/seasons.png'); display: block; float: left; margin-left: 9px; border-radius: 2px; }
+#season .season.active { border: 1px solid #982828; margin: -2px -1px -2px 8px; border-width: 2px 1px; }
+#season .season:hover { border: 1px solid #e3e3e3; margin: -1px -1px -1px 8px; }
+#season .season_summer { background-position: 0 0; }
+#season .season_winter { background-position: -31px 0; }
+#season .season_spikes { background-position: -62px 0; width: 46px; }
+#season .season_all { background-position: -108px 0; }
+
+#accordion { float: right; width: 579px; border-top: 1px solid white; }
+#accordion .panel, #accordion .view { height: 259px; float: left; position: relative; border-right: 1px solid white; }
+#accordion .panel { width: 37px; }
+#accordion .view { width: 350px; background: url('img/accordion-bg.jpg'); }
+#accordion .panel .label { width: 37px; height: 18px; position: absolute; left: 0; top: 241px; }
+#accordion .panel .text {
+	width: 238px; height: 37px;
+	position: absolute;
+	-o-transform: matrix(0, -1, 1, 0, -102px, 100px);
+	-moz-transform: matrix(0, -1, 1, 0, -102px, 100px);
+	-webkit-transform: matrix(0, -1, 1, 0, -102px, 100px);
+	filter:
+		progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=0, M12=1, M21=-1, M22=0),
+		progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1f1f1', endColorstr='#fdfdfd',GradientType=1);
+	padding-left: 2px;
+	background-color: #f7f7f7;
+	background: -moz-linear-gradient(left, #f1f1f1 0%, #fdfdfd 100%);
+	background: -webkit-gradient(linear, left center, right center, color-stop(0%,#f1f1f1), color-stop(100%,#fdfdfd));
+	background: -webkit-linear-gradient(left, #f1f1f1 0%,#fdfdfd 100%);
+	background: -o-linear-gradient(left, #f1f1f1 0%,#fdfdfd 100%);
+	background: -ms-linear-gradient(left, #f1f1f1 0%,#fdfdfd 100%);
+	background: linear-gradient(left, #f1f1f1 0%,#fdfdfd 100%);
+}
+#accordion .active .text {
+	background-color: #dc5d5d;
+	filter:
+		progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=0, M12=1, M21=-1, M22=0),
+		progid:DXImageTransform.Microsoft.gradient( startColorstr='#ead9d1', endColorstr='#fdfdfd',GradientType=1);
+	background: -moz-linear-gradient(left, #ead9d1 0%, #fdfdfd 100%);
+	background: -webkit-gradient(linear, left center, right center, color-stop(0%,#ead9d1), color-stop(100%,#fdfdfd));
+	background: -webkit-linear-gradient(left, #ead9d1 0%,#fdfdfd 100%);
+	background: -o-linear-gradient(left, #ead9d1 0%,#fdfdfd 100%);
+	background: -ms-linear-gradient(left, #ead9d1 0%,#fdfdfd 100%);
+	background: linear-gradient(left, #ead9d1 0%,#fdfdfd 100%);
+}
+#accordion .label_new {
+	background-color: #4cd4ec;
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#57ddf5', endColorstr='#32bed7',GradientType=0);
+	background: -o-linear-gradient(top, #57ddf5 0%,#32bed7 100%);
+	background: -ms-linear-gradient(top, #57ddf5 0%,#32bed7 100%);
+	background: -moz-linear-gradient(top, #57ddf5, #32bed7);
+	background: -webkit-linear-gradient(top, #57ddf5 0%,#32bed7 100%);
+	background: -webkit-gradient(linear, left center, right center, color-stop(0%,#57ddf5), color-stop(100%,#32bed7));
+	background: linear-gradient(top, #57ddf5 0%,#32bed7 100%);
+}
+#accordion .label_sale {
+	background-color: #7bbe7b;
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#88c488', endColorstr='#5bae5b',GradientType=0);
+	background: -o-linear-gradient(top, #88c488 0%, #5bae5b 100%);
+	background: -ms-linear-gradient(top, #88c488 0%, #5bae5b 100%);
+	background: -moz-linear-gradient(top, #88c488 0%, #5bae5b 100%);
+	background: -webkit-linear-gradient(top, #88c488 0%, #5bae5b 100%);
+	background: -webkit-gradient(linear, left center, right center, color-stop(0%,#88c488), color-stop(100%,#5bae5b));
+	background: linear-gradient(top, #88c488 0%, #5bae5b 100%);
+}
+#accordion .label_hit {
+	background-color: #dc5d5d;
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#df6d6d', endColorstr='#d33636',GradientType=0);
+	background: -o-linear-gradient(top, #df6d6d 0%, #d33636 100%);
+	background: -ms-linear-gradient(top, #df6d6d 0%, #d33636 100%);
+	background: -moz-linear-gradient(top, #df6d6d 0%, #d33636 100%);
+	background: -webkit-linear-gradient(top, #df6d6d 0%, #d33636 100%);
+	background: -webkit-gradient(linear, left center, right center, color-stop(0%,#df6d6d), color-stop(100%,#d33636));
+	background: linear-gradient(top, #df6d6d 0%, #d33636 100%);
+}
+
+#accordion .view .text { color:#3f3f3f;
+	position: absolute; bottom: 0; left: 0;
+	width: 340px; // width: 350px;
+	padding: 8px;
+	background: rgba(255, 255, 255, 0.7);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b2ffffff', endColorstr='#b2ffffff',GradientType=0);
+}
+
+#all_news { float: right; }
+#news h2 { padding-left: 20px; }
+#news .piece_of_news { padding-left: 20px; }
+#news .piece_of_news .date { margin: 10px 0 0 -10px; }
+
+/*   4. HEADER
+--------------------------------*/
+
+/*   5. FOOTER
+--------------------------------*/

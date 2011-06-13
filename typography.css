@@ -1,0 +1,83 @@
+/*   Typography & Colors
+*    (c) SublimeYe, 2011
+*    Skype: sublimeye
+--------------------------------*/
+body {font: 14px/1.4 Tahoma, Geneva, sans-serif}
+
+h1,h2,h3,h4,h5,h6 {font-weight: normal}
+
+h1 {font-size: 2.2em}
+h2 {font-size: 2em}
+h3 {font-size: 1.8em}
+h4 {font-size: 1.6em}
+h5 {font-size: 1.4em}
+h6 {font-size: 1.2em}
+
+/*   Links
+--------------------------------*/
+a:link {
+	color: #06C;
+	text-decoration:underline;
+}
+a:visited {}
+a:hover {
+	color: #09C;
+	text-decoration:none;
+}
+a:active {}
+	
+#header {
+	font-size:11px;
+}
+
+#cart {
+	font-size:11px;
+}
+#cart.empty, #header .right {
+	color: #999;
+	text-shadow: 0 1px 1px white;
+}
+
+#header #phone { font-size: 34px; color: black; }
+#header #phone .code { font-size: 19px; }
+#search-do { color: #6265ae; }
+#menu { font-size: 15px; text-shadow: 0 1px 1px black; text-align: right; }
+#menu a { color: white; text-decoration:none; text-align: center; }
+
+#menu2 a { color: black; font-size: 14px; text-decoration:none; }
+#menu2 .active a { color: #932222; }
+#menu2 .hover a { color: #44478b; }
+
+.tabs .title { color: #666; }
+.tabs { font-size: 23px; line-height: 120%; }
+.tabs .tab a { color: #424586; }
+.tabs .active a { color: #a83b3b; }
+.tabs .tab a { text-decoration:none; }
+
+#tire_selector { color: #333; font-size: 14px; }
+#tire_selector .price { color: #982828; font-size: 16px; text-align: right; }
+#tire_selector .double_slider .label { color:#a4a4a4; font-size: 10px; text-align: center; }
+#tire_selector .go{ color:#982828; font-size: 24px; }
+
+#accordion .panel .text { font-size: 12px; color: #666; line-height: 37px; text-shadow: 1px 1px 1px white; }
+#accordion .active .text { color: #932222; }
+#accordion .label { font-size: 11px; color: white; text-align: center; }
+
+#news h1 { color: black; font-size: 24px; text-align: center; }
+#news h2 { color: #949494; font-size: 18px; }
+#all_news { color: #aeafcd; font-size:11px; }
+#news .piece_of_news { color: #585858; font-size:12px; }
+#news .important { color: #a53838; }
+#news .piece_of_news .date { color: #3d3f76; }
+
+#footer { font-size: 11px; }
+#footer b { font-weight: bold; }
+#footer .go_to_cart, #footer .go_to_cart a { color:#ab7979; }
+#footer .catalogs a { color:#932424; }
+#footer .menu_parts a { color:#3c409e; }
+#footer .more_menu_parts a { color: #616161; }
+
+#footer .copyright { color:#333; font-size: 11px; text-align: left; line-height: 15px; }
+#footer .disclaimer { color:#b9b9b9; font-size: 10px; text-align: center; line-height: 15px; }
+#footer .studio { color:#b9b9b9; font-size: 11px; text-align: right; line-height: 15px; }
+#footer .name { color:#7d7d7d; text-decoration: none; }
