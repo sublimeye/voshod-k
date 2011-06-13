@@ -108,6 +108,12 @@ a:focus {outline: none;}
 --------------------------------*/
 
 body { background:url('img/bg.gif') repeat top center; min-width: 1200px; }
+#body { background-color:#f7f7f7; border:1px solid white; border-width: 0 1px; }
+.columns { margin-right: 579px; }
+.columns .right { float: right; width: 579px; margin-right: -579px; position: relative; }
+.columns .left { float: left; width: 100%; }
+#news { margin-left: 187px; }
+#news .text { float: right; }
 
 /*   3. CONTENT
 --------------------------------*/
@@ -129,19 +135,19 @@ body { background:url('img/bg.gif') repeat top center; min-width: 1200px; }
 	border-width: 1px 0 0 1px;
 }
 
-#selector_wrapper { background:#f7f7f7; width: 50%; min-width: 530px; float: left; height: 259px; }
-#tire_selector { background:white; border: 1px solid #e5e5e5; border-width: 1px 0 0 1px; clear: both; height: 205px; }
-#tire_selector select { width: 60px; }
-#tire_selector #creator { width: auto; }
-#tire_selector table { margin-top: 20px; width: 100%; }
-#tire_selector td { padding: 0 5px; line-height: 40px; }
-#tire_selector .double_slider { position: relative; width: 243px; height: 1px; background: #8b8b8b; }
-#tire_selector .double_slider .label { position: absolute; width: 48px; margin-left: -24px; top: -20px; line-height: 16px; }
-#tire_selector .double_slider .tick { position: absolute; left: 0; width: 1px; height: 9px; background: #8b8b8b; margin-left: 24px;  }
-#tire_selector .double_slider .knob { position: absolute; width: 8px; height: 14px; background: url('img/knob.png'); cursor: pointer; cursor: hand; }
-#tire_selector .double_slider .knob-left { background-position: 0 0; }
-#tire_selector .double_slider .knob-right { background-position: -8px 0; }
-#tire_selector .double_slider .bar {
+#selector_wrapper { height: 243px; }
+.selector { background:white; border: 1px solid #e5e5e5; border-width: 1px 0 0 1px; clear: both; height: 207px; }
+.selector select { width: 60px; }
+.selector #creator { width: auto; }
+.selector table { margin-top: 20px; width: 100%; }
+.selector td { padding: 0 5px; line-height: 40px; }
+.selector .double_slider { position: relative; width: 243px; height: 1px; background: #8b8b8b; }
+.selector .double_slider .label { position: absolute; width: 48px; margin-left: -24px; top: -20px; line-height: 16px; }
+.selector .double_slider .tick { position: absolute; left: 0; width: 1px; height: 9px; background: #8b8b8b; margin-left: 24px;  }
+.selector .double_slider .knob { position: absolute; width: 8px; height: 14px; background: url('img/knob.png'); cursor: pointer; cursor: hand; }
+.selector .double_slider .knob-left { background-position: 0 0; }
+.selector .double_slider .knob-right { background-position: -8px 0; }
+.selector .double_slider .bar {
 	position: absolute; top: -2px; height: 5px;
 	background-color: #4f539d;
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#565aac', endColorstr='#3e417b',GradientType=0);
@@ -152,7 +158,10 @@ body { background:url('img/bg.gif') repeat top center; min-width: 1200px; }
 	background: -webkit-gradient(linear, left center, right center, color-stop(0%,#565aac), color-stop(100%,#3e417b));
 	background: linear-gradient(top, #565aac 0%,#3e417b 100%);
 }
-#tire_selector .go{ padding-left: 40px; background: url('img/tire.png') left center no-repeat scroll; position: relative; top: 20px; }
+.selector .go{ padding-left: 40px; background: url('img/goods_large_icon.png') left center no-repeat scroll; position: relative; top: 20px; }
+#tire_selector .go { background-position: 0 -11px; }
+#disc_selector .go { background-position: 0 -51px; }
+#brand_selector .go { background-position: 0 -80px; padding-top: 10px; padding-left: 60px; }
 
 .price { width: 3.5em; border: 1px solid #bababa; border-radius: 2px; }
 
@@ -165,7 +174,7 @@ body { background:url('img/bg.gif') repeat top center; min-width: 1200px; }
 #season .season_spikes { background-position: -62px 0; width: 46px; }
 #season .season_all { background-position: -108px 0; }
 
-#accordion { float: right; width: 579px; border-top: 1px solid white; }
+#accordion { width: 579px; height: 259px; border-top: 1px solid white; }
 #accordion .panel, #accordion .view { height: 259px; float: left; position: relative; border-right: 1px solid white; }
 #accordion .panel { width: 37px; }
 #accordion .view { width: 350px; background: url('img/accordion-bg.jpg'); }
@@ -239,10 +248,39 @@ body { background:url('img/bg.gif') repeat top center; min-width: 1200px; }
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b2ffffff', endColorstr='#b2ffffff',GradientType=0);
 }
 
-#all_news { float: right; }
-#news h2 { padding-left: 20px; }
-#news .piece_of_news { padding-left: 20px; }
+#all_news { float: right; padding-right: 15px; margin-top: -18px; }
+#news h2 { margin-top: 30px; padding: 0 20px; }
+#news .piece_of_news { padding: 0 20px; }
 #news .piece_of_news .date { margin: 10px 0 0 -10px; }
+
+#news .banners { float: left; width: 187px; margin-left: -187px; position: relative; }
+#news .banners img { float: left; }
+
+#article h1 { margin-top: 25px; }
+#article p { margin: 1em 0; padding: 0 1em; text-indent: 1em; text-align:justify; }
+
+#goods .tire { width: 202px; height: 349px; border: 1px solid #e1e1e1; margin-right: 28px; }
+#goods .tire .logo { width: 200px; height: 38px; }
+#goods .tire .title { font-size: 16px; color: white; text-shadow: 1px 0 1px black; }
+#goods .tire .title {
+	width: 200px; height: 34px;
+	border: 1px solid;
+	border-width: 1px 0;
+	border-color: #3b3d72 black #030d3b;
+	background-color: #434688;
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4b4fa1', endColorstr='#3b3d72',GradientType=0);
+	background: -o-linear-gradient(top, #4b4fa1 0%, #3b3d72 100%);
+	background: -ms-linear-gradient(top, #4b4fa1 0%, #3b3d72 100%);
+	background: -moz-linear-gradient(top, #4b4fa1 0%, #3b3d72 100%);
+	background: -webkit-linear-gradient(top, #4b4fa1 0%, #3b3d72 100%);
+	background: -webkit-gradient(linear, left center, right center, color-stop(0%,#4b4fa1), color-stop(100%,#3b3d72));
+	background: linear-gradient(top, #4b4fa1 0%, #3b3d72 100%);
+}
+
+.vehicle_icon { width: 33px; height: 18px; background: url('img/vehicle_icons.png') no-repeat; }
+.vehicle_icon_auto { background-position: 0 0; }
+.vehicle_icon_truck { background-position: 0 -18px; }
+.vehicle_icon_moto { background-position: 0 -36px; }
 
 /*   4. HEADER
 --------------------------------*/

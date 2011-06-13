@@ -54,21 +54,24 @@ a:active {}
 .tabs .active a { color: #a83b3b; }
 .tabs .tab a { text-decoration:none; }
 
-#tire_selector { color: #333; font-size: 14px; }
-#tire_selector .price { color: #982828; font-size: 16px; text-align: right; }
-#tire_selector .double_slider .label { color:#a4a4a4; font-size: 10px; text-align: center; }
-#tire_selector .go{ color:#982828; font-size: 24px; }
+.selector { color: #333; font-size: 14px; }
+.selector .price { color: #982828; font-size: 16px; text-align: right; }
+.selector .double_slider .label { color:#a4a4a4; font-size: 10px; text-align: center; }
+.selector .go{ color:#982828; font-size: 24px; line-height: 36px; }
 
 #accordion .panel .text { font-size: 12px; color: #666; line-height: 37px; text-shadow: 1px 1px 1px white; }
 #accordion .active .text { color: #932222; }
 #accordion .label { font-size: 11px; color: white; text-align: center; }
 
-#news h1 { color: black; font-size: 24px; text-align: center; }
 #news h2 { color: #949494; font-size: 18px; }
 #all_news { color: #aeafcd; font-size:11px; }
 #news .piece_of_news { color: #585858; font-size:12px; }
 #news .important { color: #a53838; }
 #news .piece_of_news .date { color: #3d3f76; }
+
+#article h1 { color: black; font-size: 24px; text-align: center; }
+#article p { font-size: 12px; }
+#article p:first-letter { color: #932222; }
 
 #footer { font-size: 11px; }
 #footer b { font-weight: bold; }

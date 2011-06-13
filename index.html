@@ -47,133 +47,258 @@
 			<li><div><a href="#">Контакты</a></div></li>
 		</ul>
 		<div id="body">
-			<div id="selector_wrapper">
-				<div class="tabs">
-					<span class="title">Быстый подбор</span>
-					<div class="tab active"><div><a href="#">шин</a></div></div>
-					<div class="tab"><div><a href="#">дисков</a></div></div>
-					<div class="tab"><div><a href="#">по марке авто</a></div></div>
-				</div>
-				<div id="tire_selector">
-					<table>
-					<tr>
-						<td><img src="img/question.gif"></td>
-						<td>Ширина профиля, мм</td>
-						<td><select name="width">
-							<option value="205">205</option>
-							<option value="190">190</option>
-						</select></td>
-						<td>Производитель
-							<select name="creator" id="creator">
-							<option value="1">Bridgestone</option>
-							<option value="2" selected="selected">Continental</option>
-							<option value="3">Goodyear</option>
-							<option value="4">Firestone</option>
-							<option value="5">Michelin</option>
-							<option value="6">nokian Tyres</option>
-						</select></td>
-					</tr><tr>
-						<td><img src="img/question.gif"></td>
-						<td>Высота профиля, мм</td>
-						<td><select name="height">
-							<option value="75">75</option>
-							<option value="65">65</option>
-							<option value="55">55</option>
-							<option value="45">45</option>
-						</select></td>
-						<td>Цена от <input class="price" name="price_low" value="12345"/>
-							до <input class="price" name="price_high" value="99765"/> руб.</td>
-					</tr><tr>
-						<td><img src="img/question.gif"></td>
-						<td>Диаметр</td>
-						<td><select name="radius">
-							<option value="18">R18</option>
-							<option value="17">R17</option>
-							<option value="16">R16</option>
-							<option value="15">R15</option>
-						</select></td>
-						<td>
-							<div class="double_slider">
-								<div class="labels">
-									<div class="label" style="left: 51px;">10 000<div class="tick"></div></div>
-									<div class="label" style="left: 138px;">50 000<div class="tick"></div></div>
-									<div class="label" style="left: 214px;">100 000<div class="tick"></div></div>
-								</div>
-								<div class="knob knob-left" style="left: 50px;"></div>
-								<div class="knob knob-right" style="left: 210px;"></div>
-								<div class="bar" style="left: 58px; width: 152px;"></div>
+			<div class="columns">
+				<div class="left">
+					<!-- ВЫБОР ТОВАРОВ -->
+					<div id="selector_wrapper">
+						<div class="tabs">
+							<span class="title">Быстый подбор</span>
+							<div class="tab active" tab="tire"><div><a href="#">шин</a></div></div>
+							<div class="tab" tab="disc"><div><a href="#">дисков</a></div></div>
+							<div class="tab" tab="brand"><div><a href="#">по марке авто</a></div></div>
+						</div>
+						<!-- ШИНЫ -->
+						<div id="tire_selector" class="selector">
+							<table>
+							<tr>
+								<td><img src="img/question.gif" /></td>
+								<td>Ширина профиля, мм</td>
+								<td><select name="width">
+									<option value="205">205</option>
+									<option value="190">190</option>
+								</select></td>
+								<td>Производитель
+									<select name="creator" id="creator">
+									<option value="1">Bridgestone</option>
+									<option value="2" selected="selected">Continental</option>
+									<option value="3">Goodyear</option>
+									<option value="4">Firestone</option>
+									<option value="5">Michelin</option>
+									<option value="6">nokian Tyres</option>
+								</select></td>
+							</tr><tr>
+								<td><img src="img/question.gif" /></td>
+								<td>Высота профиля, мм</td>
+								<td><select name="height">
+									<option value="75">75</option>
+									<option value="65">65</option>
+									<option value="55">55</option>
+									<option value="45">45</option>
+								</select></td>
+								<td>Цена от <input class="price" name="price_low" value="12345"/>
+									до <input class="price" name="price_high" value="99765"/> руб.</td>
+							</tr><tr>
+								<td><img src="img/question.gif" /></td>
+								<td>Диаметр</td>
+								<td><select name="radius">
+									<option value="18">R18</option>
+									<option value="17">R17</option>
+									<option value="16">R16</option>
+									<option value="15">R15</option>
+								</select></td>
+								<td>
+									<div class="double_slider">
+										<div class="labels">
+											<div class="label" style="left: 51px;">10 000<div class="tick"></div></div>
+											<div class="label" style="left: 138px;">50 000<div class="tick"></div></div>
+											<div class="label" style="left: 214px;">100 000<div class="tick"></div></div>
+										</div>
+										<div class="knob knob-left" style="left: 50px;"></div>
+										<div class="knob knob-right" style="left: 210px;"></div>
+										<div class="bar" style="left: 58px; width: 152px;"></div>
+									</div>
+								</td>
+							</tr><tr>
+								<td><img src="img/question.gif" /></td>
+								<td colspan="2">Сезон <div id="season">
+									<a class="season season_summer" href="#"></a>
+									<a class="season season_winter" href="#"></a>
+									<a class="season season_spikes active" href="#"></a>
+									<a class="season season_all" href="#"></a>
+								</div></td>
+								<td><a href="#" class="go">Подобрать шины</a></td>
+							</tr>
+							</table>
+						</div>
+						<!-- ДИСКИ -->
+						<div id="disc_selector" class="selector" style="display: none;">
+							<table>
+							<tr>
+								<td><img src="img/question.gif" /></td>
+								<td>Ширина обода, дюймы</td>
+								<td><select name="width">
+									<option value="205">205</option>
+									<option value="190">190</option>
+								</select></td>
+								<td>Производитель
+									<select name="creator" id="creator">
+									<option value="1">Bridgestone</option>
+									<option value="2" selected="selected">Continental</option>
+									<option value="3">Goodyear</option>
+									<option value="4">Firestone</option>
+									<option value="5">Michelin</option>
+									<option value="6">nokian Tyres</option>
+								</select></td>
+							</tr><tr>
+								<td><img src="img/question.gif" /></td>
+								<td>Диаметр, дюймы</td>
+								<td><select name="height">
+									<option value="75">75</option>
+									<option value="65">65</option>
+									<option value="55">55</option>
+									<option value="45">45</option>
+								</select></td>
+								<td>Цена от <input class="price" name="price_low" value="12345"/>
+									до <input class="price" name="price_high" value="99765"/> руб.</td>
+							</tr><tr>
+								<td><img src="img/question.gif" /></td>
+								<td>PCD</td>
+								<td><select name="radius">
+									<option value="1">4*100</option>
+									<option value="2" checked="checked">5*100</option>
+									<option value="3">4*120</option>
+									<option value="4">5*120</option>
+								</select></td>
+								<td>
+									<div class="double_slider">
+										<div class="labels">
+											<div class="label" style="left: 51px;">10 000<div class="tick"></div></div>
+											<div class="label" style="left: 138px;">50 000<div class="tick"></div></div>
+											<div class="label" style="left: 214px;">100 000<div class="tick"></div></div>
+										</div>
+										<div class="knob knob-left" style="left: 50px;"></div>
+										<div class="knob knob-right" style="left: 210px;"></div>
+										<div class="bar" style="left: 58px; width: 152px;"></div>
+									</div>
+								</td>
+							</tr><tr>
+								<td><img src="img/question.gif" /></td>
+								<td>Вылет, мм</td>
+								<td><select name="radius">
+									<option value="1">30-40</option>
+									<option value="2">40-50</option>
+									<option value="3">50-65</option>
+									<option value="4">65-80</option>
+								</select></td>
+								<td><a href="#" class="go">Подобрать шины</a></td>
+							</tr>
+							</table>
+						</div>
+						<div id="brand_selector" class="selector" style="display: none;">
+							<table>
+							<tr>
+								<td><img src="img/question.gif" /></td>
+								<td>Марка авто<select name="brand">
+									<option value="1">Acura</option>
+									<option value="2" selected="selected">Aston Martin</option>
+									<option value="3">Audi</option>
+									<option value="4">Bentley</option>
+									<option value="5">BMW</option>
+									<option value="6">Buick</option>
+									<option value="7">Cadiallac</option>
+								</select></td>
+								<td></td>
+								<td>Модель: <select name="model">
+									<option value="1">VANQUISH A</option>
+									<option value="2" selected="selected">VANQUISH S</option>
+									<option value="3">VANQUISH X</option>
+								</select></td>
+							</tr><tr>
+								<td><img src="img/question.gif" /></td>
+								<td>год выпуска<select name="year">
+									<option value="2008">2008</option>
+									<option value="2009">2009</option>
+									<option value="2010">2010</option>
+									<option value="2011">2011</option>
+								</select></td>
+								<td><img src="img/question.gif" /></td>
+								<td>Модификация: <select name="mod">
+									<option value="1">5.5i</option>
+									<option value="2">5.5TD</option>
+									<option value="3">6.0i</option>
+									<option value="4">6.0TD</option>
+								</select></td>
+							</tr><tr>
+								<td colspan="6">
+									<a href="#" class="go">Подобрать шины и диски</a>
+								</td>
+							</tr>
+							</table>
+						</div>
+					</div>
+					<!-- NEWS -->
+					<div id="news">
+						<div class="banners">
+							<img src="img/banner-1.jpg"/>
+							<img src="img/banner-2.jpg"/>
+							<img src="img/banner-3.jpg"/>
+						</div>
+						<div class="text">
+							<h2>Новости</h2>
+							<a href="#" id="all_news">Посмотреть все новости</a>
+							<div class="piece_of_news important">
+								<div class="date">25 мая</div>
+								График работы региональных представительств магазина в период майских праздников
 							</div>
-						</td>
-					</tr><tr>
-						<td><img src="img/question.gif"></td>
-						<td colspan="2">Сезон <div id="season">
-							<a class="season season_summer" href="#"></a>
-							<a class="season season_winter" href="#"></a>
-							<a class="season season_spikes active" href="#"></a>
-							<a class="season season_all" href="#"></a>
-						</div></td>
-						<td><a href="#" class="go">Подобрать шины</a></td>
-					</tr>
-					</table>
+							<div class="piece_of_news">
+								<div class="date">22 мая</div>
+								Yokohama начала реализацию первого этапа расширения производства на Филиппинах.
+							</div>
+							<div class="piece_of_news">
+								<div class="date">12 апреля</div>
+								11 форум Michelin Challenge Bibendum
+							</div>
+							<div class="piece_of_news">
+								<div class="date">3 апреля</div>
+								Открытие представительства в г.Казань
+							</div>
+						</div>
+					</div>
+
 				</div>
-			</div>
-			<div id="accordion">
-				<a class="panel" href="#">
-					<span class="label label_new">new</span>
-					<div class="text">Новые поступления шин Nokian</div>
-				</a>
-				<a class="panel" href="#">
-					<span class="label label_sale">sale</span>
-					<div class="text">Специальные цены на модели 2010 года</div>
-				</a>
-				<a class="panel active" href="#">
-					<span class="label label_hit">hit</span>
-					<div class="text">Монтаж по специальной цене</div>
-				</a>
-				<div class="view">
-					<div class="text">
-						<div style="font-size:36px;">Скидка 30%</div>
-						<div style="font-size:12px;">При записи на шиномонтаж за неделю и в утренние часы</div>
+				<div class="right">
+					<!-- ACCORDION -->
+					<div id="accordion">
+						<a class="panel" href="#">
+							<span class="label label_new">new</span>
+							<div class="text">Новые поступления шин Nokian</div>
+						</a>
+						<a class="panel" href="#">
+							<span class="label label_sale">sale</span>
+							<div class="text">Специальные цены на модели 2010 года</div>
+						</a>
+						<a class="panel active" href="#">
+							<span class="label label_hit">hit</span>
+							<div class="text">Монтаж по специальной цене</div>
+						</a>
+						<div class="view">
+							<div class="text">
+								<div style="font-size:36px;">Скидка 30%</div>
+								<div style="font-size:12px;">При записи на шиномонтаж за неделю и в утренние часы</div>
+							</div>
+						</div>
+						<a class="panel" href="#">
+							<span class="label label_new">new</span>
+							<div class="text">Новые поступления шин Mishelin</div>
+						</a>
+						<a class="panel" href="#">
+							<span class="label label_new">new</span>
+							<div class="text">Новые поступления дисков K&amp;K</div>
+						</a>
+						<a class="panel" href="#">
+							<span class="label label_sale">sale</span>
+							<div class="text">Специальные цены на литые диски</div>
+						</a>
+					</div>
+					<!-- ARTCILE -->
+					<div id="article">
+						<h1>Для изучающих теор.мех</h1>
+						<p>Движение ротора преобразует гироинтегратор, от чего сильно зависит величина систематического ухода гироскопа. Устойчивость перманентно искажает гравитационный крен, что явно следует из прецессионных уравнений движения. Нутация, в соответствии с основным законом динамики, апериодичен. <a href="#">Инерциальная навигация</a> интегрирует резонансный волчок, используя имеющиеся в этом случае первые интегралы. </p>
+						<p>Малое колебание даёт более простую систему дифференциальных уравнений, если исключить уход гироскопа, основываясь на предыдущих вычислениях. Время набора максимальной <a href="#">скорости методически</a> переворачивает штопор, даже если не учитывать выбег гироскопа.</p>
+						<p>Сила трансформирует гироскоп, что обусловлено малыми углами карданового подвеса. Точность курса, в силу третьего закона Ньютона, требует большего внимания к анализу ошибок, которые даёт твердый гироскопический маятник, даже если рамки подвеса буду ориентированы под прямым углом. <a href="#">Последнее векторное равенство</a> заставляет перейти к более сложной системе дифференциальных уравнений, если добавить волчок, не забывая о том, что интенсивность диссипативных сил, характеризующаяся величиной коэффициента D, должна лежать в определённых пределах.</p>
 					</div>
 				</div>
-				<a class="panel" href="#">
-					<span class="label label_new">new</span>
-					<div class="text">Новые поступления шин Mishelin</div>
-				</a>
-				<a class="panel" href="#">
-					<span class="label label_new">new</span>
-					<div class="text">Новые поступления дисков K&amp;K</div>
-				</a>
-				<a class="panel" href="#">
-					<span class="label label_sale">sale</span>
-					<div class="text">Специальные цены на литые диски</div>
-				</a>
-			</div>
-			<div id="news">
-				<h2>Новости</h2>
-				<a href="#" id="all_news">Посмотреть все новости</a>
-				<div class="piece_of_news important">
-					<div class="date">25 мая</div>
-					График работы региональных представительств магазина в период майских праздников
-				</div>
-				<div class="piece_of_news">
-					<div class="date">22 мая</div>
-					Yokohama начала реализацию первого этапа расширения производства на Филиппинах.
-				</div>
-				<div class="piece_of_news">
-					<div class="date">12 апреля</div>
-					11 форум Michelin Challenge Bibendum
-				</div>
-				<div class="piece_of_news">
-					<div class="date">3 апреля</div>
-					Открытие представительства в г.Казань
-				</div>
-			</div>
-			<div>
-				<h1>Заголовок H1  для главной страницы</h1>
-				<p>Движение ротора преобразует гироинтегратор, от чего сильно зависит величина систематического ухода гироскопа. Устойчивость перманентно искажает гравитационный крен, что явно следует из прецессионных уравнений движения. Нутация, в соответствии с основным законом динамики, апериодичен. <a href="#">Инерциальная навигация</a> интегрирует резонансный волчок, используя имеющиеся в этом случае первые интегралы. </p>
-				<p>Малое колебание даёт более простую систему дифференциальных уравнений, если исключить уход гироскопа, основываясь на предыдущих вычислениях. Время набора максимальной скорости методически переворачивает штопор, даже если не учитывать выбег гироскопа.</p>
-				<p>Сила трансформирует гироскоп, что обусловлено малыми углами карданового подвеса. Точность курса, в силу третьего закона Ньютона, требует большего внимания к анализу ошибок, которые даёт твердый гироскопический маятник, даже если рамки подвеса буду ориентированы под прямым углом. <a href="#">Последнее векторное равенство</a> заставляет перейти к более сложной системе дифференциальных уравнений, если добавить волчок, не забывая о том, что интенсивность диссипативных сил, характеризующаяся величиной коэффициента D, должна лежать в определённых пределах.</p>
+				<br style="clear:both;"/>
 			</div>
 		</div>
 		<div id="footer">
@@ -219,6 +344,19 @@
 		</div>
 	</div>
 
+<script type="text/javascript" src="/js/mootools-1.3.js"></script>
+<script type="text/javascript"><!--
+$$(".tab a").addEvent('click', function(event){
+	var old_tab = $$(".tab.active")[0];
+	var new_tab = this.parentNode.parentNode;
+	if (old_tab == new_tab) return;
+	old_tab.removeClass('active');
+	$(old_tab.get('tab') + "_selector").style.display = 'none';
+	new_tab.addClass('active');
+	$(new_tab.get('tab') + "_selector").style.display = '';
+	event.preventDefault();
+});
+--></script>
 </body>
 </html>
 <!-- hello, git -->
