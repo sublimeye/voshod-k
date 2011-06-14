@@ -80,11 +80,11 @@ a:active {}
 
 #news h2 { color: #949494; font-size: 18px; }
 #all_news { color: #aeafcd; font-size:11px; }
-#news .piece_of_news a { color: #585858; font-size:12px;
-	text-decoration: none;}
-#news .piece_of_news a:hover {
-	text-decoration: underline;}
-#news .important a { color: #a53838; margin-bottom: 22px }
+#news .piece_of_news {font-size:12px}
+#news .piece_of_news a {color: #585858; text-decoration: none;}
+#news .piece_of_news a:hover {text-decoration: underline;}
+#news .important { margin-bottom: 22px }
+#news .important a {color: #a53838;}
 #news .piece_of_news .date { color: #3d3f76; }
 
 .article h1 { color: black; font-size: 24px; text-align: center; }
