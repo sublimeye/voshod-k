@@ -3,5 +3,13 @@
 #season { margin-top: -32px; }
 .product-list .right-border { margin-top: -34px; }
 .product-actions .emdash { left:-93px; }
-#footer .notice { width: 49%; }
-#footer .dev { width: 24%; }
+
+#footer .notice { width: 50%}
+#footer .dev { width: 25%;	clear: right;}
+#menu2 {
+	overflow-x: hidden;
+}
+#menu2 li {
+	zoom: 1;
+	*display: inline;
+}

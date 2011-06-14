@@ -47,8 +47,8 @@ a:active {}
 #header #phone { font-size: 34px; color: #333; }
 #header #phone .code { font-size: 20px; }
 #search-do { color: #6265ae; }
-#menu { font-size: 15px; text-shadow: 0 1px 1px black; text-align: right; }
-#menu a { color: white; text-decoration:none; text-align: center; }
+#menu {  text-align: right}
+#menu a {font-size: 16px; color: white; text-shadow: 0 1px 0px black; text-decoration:none; text-align: center; }
 
 #menu2 a { color: black; font-size: 14px; text-decoration:none; }
 #menu2 .active a { color: #932222; }
@@ -72,12 +72,16 @@ a:active {}
 
 #news h2 { color: #949494; font-size: 18px; }
 #all_news { color: #aeafcd; font-size:11px; }
-#news .piece_of_news { color: #585858; font-size:12px; }
-#news .important { color: #a53838; margin-bottom: 22px }
+#news .piece_of_news a { color: #585858; font-size:12px;
+	text-decoration: none;}
+#news .piece_of_news a:hover {
+	text-decoration: underline;}
+#news .important a { color: #a53838; margin-bottom: 22px }
 #news .piece_of_news .date { color: #3d3f76; }
 
 .article h1 { color: black; font-size: 24px; text-align: center; }
-.article p { font-size: 12px; text-indent: 1em; text-align: justify; }
+.article p {
+	line-height: 1.2; font-size: 12px; text-indent: 1.5em; text-align: justify; }
 .article p:first-letter { color: #932222; }
 
 .product-details .properties div { text-align: center; }
