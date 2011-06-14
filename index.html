@@ -76,7 +76,7 @@
 						<div id="tire_selector" class="selector">
 							<table>
 							<tr>
-								<td><img src="img/question.gif" width="12" height="12" alt="" /></td>
+								<td><a href="#" class="icon_help"></a></td>
 								<td>Ширина профиля, мм</td>
 								<td><select name="width">
 									<option value="205">205</option>
@@ -92,7 +92,7 @@
 									<option value="6">nokian Tyres</option>
 								</select></td>
 							</tr><tr>
-								<td><img src="img/question.gif" width="12" height="12"  alt="" /></td>
+								<td><a href="#" class="icon_help"></a></td>
 								<td>Высота профиля, мм</td>
 								<td><select name="height">
 									<option value="75">75</option>
@@ -103,7 +103,7 @@
 								<td>Цена от <input class="price" name="price_low" value="12345"/>
 									до <input class="price" name="price_high" value="99765"/> руб.</td>
 							</tr><tr>
-								<td><img src="img/question.gif" width="12" height="12" alt="" /></td>
+								<td><a href="#" class="icon_help"></a></td>
 								<td>Диаметр</td>
 								<td><select name="radius">
 									<option value="18">R18</option>
@@ -124,8 +124,8 @@
 									</div>
 								</td>
 							</tr><tr>
-								<td><img src="img/question.gif" width="12" height="12" alt="" /></td>
-								<td colspan="2">Сезон <div id="season">
+								<td><a href="#" class="icon_help"></a></td>
+								<td colspan="2"><span>Сезон</span> <div id="season">
 									<a class="season season_summer" href="#"></a>
 									<a class="season season_winter" href="#"></a>
 									<a class="season season_spikes active" href="#"></a>
@@ -139,7 +139,7 @@
 						<div id="disc_selector" class="selector" style="display: none;">
 							<table>
 							<tr>
-								<td><img src="img/question.gif" width="12" height="12" alt="" /></td>
+								<td><a href="#" class="icon_help"></a></td>
 								<td>Ширина обода, дюймы</td>
 								<td><select name="width">
 									<option value="205">205</option>
@@ -155,7 +155,7 @@
 									<option value="6">nokian Tyres</option>
 								</select></td>
 							</tr><tr>
-								<td><img src="img/question.gif" width="12" height="12" alt="" /></td>
+								<td><a href="#" class="icon_help"></a></td>
 								<td>Диаметр, дюймы</td>
 								<td><select name="height">
 									<option value="75">75</option>
@@ -187,7 +187,7 @@
 									</div>
 								</td>
 							</tr><tr>
-								<td><img src="img/question.gif" width="12" height="12" alt="" /></td>
+								<td><a href="#" class="icon_help"></a></td>
 								<td>Вылет, мм</td>
 								<td><select name="radius">
 									<option value="1">30-40</option>
@@ -202,7 +202,7 @@
 						<div id="brand_selector" class="selector" style="display: none;">
 							<table>
 							<tr>
-								<td><img src="img/question.gif" width="12" height="12" alt="" /></td>
+								<td><a href="#" class="icon_help"></a></td>
 								<td>Марка авто<select name="brand">
 									<option value="1">Acura</option>
 									<option value="2" selected="selected">Aston Martin</option>
@@ -219,14 +219,14 @@
 									<option value="3">VANQUISH X</option>
 								</select></td>
 							</tr><tr>
-								<td><img src="img/question.gif" width="12" height="12" alt="" /></td>
+								<td><a href="#" class="icon_help"></a></td>
 								<td>год выпуска<select name="year">
 									<option value="2008">2008</option>
 									<option value="2009">2009</option>
 									<option value="2010">2010</option>
 									<option value="2011">2011</option>
 								</select></td>
-								<td><img src="img/question.gif" width="12" height="12" alt="" /></td>
+								<td><a href="#" class="icon_help"></a></td>
 								<td>Модификация: <select name="mod">
 									<option value="1">5.5i</option>
 									<option value="2">5.5TD</option>
@@ -245,35 +245,35 @@
 					<!--Accordion -->
 					<div id="accordion">
 						<a class="panel" href="#">
-							<span class="label label_new">new</span>
-							<span class="text">Новые поступления шин Nokian</span>
+							<div class="text text1"></div>
+							<div class="label label_new"></div>
 						</a>
+						<div class="view" style="width: 0px;"><div class="text"><h1>Скидка 30%</h1><p>При записи на шиномонтаж за неделю и в утренние часы</p></div></div>
 						<a class="panel" href="#">
-							<span class="label label_sale">sale</span>
-							<span class="text">Специальные цены на модели 2010 года</span>
+							<div class="text text2"></div>
+							<div class="label label_sale"></div>
 						</a>
+						<div class="view" style="width: 0px;"><div class="text"><h1>Скидка 30%</h1><p>При записи на шиномонтаж за неделю и в утренние часы</p></div></div>
 						<a class="panel active" href="#">
-							<span class="label label_hit">hit</span>
-							<span class="text">Монтаж по специальной цене</span>
+							<div class="text text3"></div>
+							<div class="label label_hit"></div>
 						</a>
-						<div class="view">
-							<div class="text">
-								<div style="font-size:36px;">Скидка 30%</div>
-								<div style="font-size:12px;">При записи на шиномонтаж за неделю и в утренние часы</div>
-							</div>
-						</div>
+						<div class="view"><div class="text"><h1>Скидка 30%</h1><p>При записи на шиномонтаж за неделю и в утренние часы</p></div></div>
 						<a class="panel" href="#">
-							<span class="label label_new">new</span>
-							<span class="text">Новые поступления шин Mishelin</span>
+							<div class="text text4"></div>
+							<div class="label label_new"></div>
 						</a>
+						<div class="view" style="width: 0px;"><div class="text"><h1>Скидка 30%</h1><p>При записи на шиномонтаж за неделю и в утренние часы</p></div></div>
 						<a class="panel" href="#">
-							<span class="label label_new">new</span>
-							<span class="text">Новые поступления дисков K&amp;K</span>
+							<div class="text text5"></div>
+							<div class="label label_new"></div>
 						</a>
+						<div class="view" style="width: 0px;"><div class="text"><h1>Скидка 30%</h1><p>При записи на шиномонтаж за неделю и в утренние часы</p></div></div>
 						<a class="panel" href="#">
-							<span class="label label_sale">sale</span>
-							<span class="text">Специальные цены на литые диски</span>
+							<div class="text text6"></div>
+							<div class="label label_sale"></div>
 						</a>
+						<div class="view" style="width: 0px;"><div class="text"><h1>Скидка 30%</h1><p>При записи на шиномонтаж за неделю и в утренние часы</p></div></div>
 					</div>
 
 		</div>
@@ -324,63 +324,97 @@
 		</div>
 
 		<ul class="product-list">
-
+			<li class="right-border"></li>
+			
 			<li class="p-item">
-				<div class="brand"><img src="" alt="" /></div>
+				<div class="brand"><img src="img/logos/yokohama.gif" alt="" /></div>
 				<h2 class="product-heading">Geolandar I/T (GO72)</h2>
 				<div class="product-details">
-					<div class="fig"><img src="" alt="" /></div>
+					<div class="fig"><img src="img/photos/1.jpg" alt="" /></div>
 					<ul class="product-specifics">
-						<li class="car-type"><i class="ico"></i></li>
-						<li class="weather-type"><i class="ico"></i></li>
-						<li class="addon-type"><i class="ico"></i></li>
+						<li class="car-type"><i class="vehicle_icon vehicle_icon_auto"></i></li>
+						<li class="weather-type"><i class="season season_summer"></i></li>
+						<li class="addon-type"><i></i></li>
 					</ul>
 					<div class="properties">
-						<div class="size"><span>Размер</span><big><b>265</b>/<b>45R21</b></big></div>
-						<div class="index"><span>Индекс</span><big>104Q</big></div>
-						<div class="info-flyer">
-							<i class="ico">?</i>
-						</div>
+						<div class="size"><span>Размер</span><br/><big><b>265</b>/<b>45R21</b></big></div>
+						<div class="index"><span>Индекс</span><br/><big>104Q</big></div>
+						<a class="info-flyer" href="#"></a>
 					</div>
 				</div>
-
 				<div class="product-actions">
 					<div class="amount-selector">
-						<a class="inc-amount" href="#">+</a>
-						<a class="dec-amount" href="#">-</a>
-						<input type="text" class="amount-number" /><span>шт.</span>
+						<a class="inc-amount" href="#"></a>
+						<a class="dec-amount" href="#"></a>
+						<input type="text" class="amount-number" value="99" /><span>шт.</span>
 					</div>
-					<div>&mdash;</div>
-					<div class="price"><big>9 506</big> руб.</div>
+					<div class="price">
+						<div class="emdash">&mdash;</div>
+						<div class="value"><big>941 094</big> руб.</div>
+					</div>
 				</div>
-				<div class="availability">
-					В наличии менее 4 шт.
+				<div class="availability availability-present">
+					<div class="present">В наличии</div>
+					<div class="amount">менее 4 шт.</div>
 				</div>
-				<a class="btn-buy" href="#"><!--but-btn text--></a>
+				<a class="btn-buy" href="#">Купить</a>
 			</li>
 
+			<li class="p-item">
+				<div class="brand"><img src="img/logos/nokian.gif" alt="" /></div>
+				<h2 class="product-heading">Hakka H</h2>
+				<div class="product-details">
+					<div class="fig"><img src="img/photos/1.jpg" alt="" /></div>
+					<ul class="product-specifics">
+						<li class="car-type"><i class="vehicle_icon vehicle_icon_truck"></i></li>
+						<li class="weather-type"><i class="season season_winter"></i></li>
+					</ul>
+					<div class="properties">
+						<div class="size"><span>Размер</span><br/><big><b>265</b>/<b>45R21</b></big></div>
+						<div class="index"><span>Индекс</span><br/><big>104Q</big></div>
+						<a href="#" class="info-flyer"></a>
+					</div>
+				</div>
+				<div class="product-actions">
+					<div class="amount-selector">
+						<a class="inc-amount" href="#"></a>
+						<a class="dec-amount" href="#"></a>
+						<input type="text" class="amount-number" value="1" /><span>шт.</span>
+					</div>
+					<div class="price">
+						<div class="emdash">&mdash;</div>
+						<div class="value"><big>9 506</big> руб.</div>
+					</div>
+				</div>
+				<div class="availability availability-present">
+					<div class="present">В наличии</div>
+					<div class="amount">много</div>
+				</div>
+				<a class="btn-buy" href="#">Купить</a>
+			</li>
+			<li style="clear:both;"></li>
 		</ul><!--//product-list-->
 	</div><!--//main-->
 
 	<div id="footer-navigation">
 		<div class="office-info">
-			<div class="column">
+			<div class="column column_contacts">
 				<h5>Контактная информация:</h5>
-				<dl style="color:#7b7ca8;">
+				<dl>
 					<dt>Телефон:</dt>  <dd>(495) <b>335 4010</b></dd>
 					<dt>E-mail:</dt>  <dd><a href="mailto:voshod@voshod-avto.ru">voshod@voshod-avto.ru</a></dd>
 				</dl>
-				<a href="#" style="color:#29a52f;">Контакты и схема проезда</a>
+				<a href="#" class="contacts_link">Контакты и схема проезда</a>
 			</div>
-			<div class="column">
+			<div class="column column_time">
 				<h5>Время работы офисов:</h5>
 				<dl>
 					<dt>Пн-Пт:</dt>  <dd>с <b>9<sup>00</sup></b> до <b>17<sup>00</sup></b></dd>
 					<dt>Сб:</dt>  <dd>с <b>9<sup>00</sup></b> до <b>15<sup>00</sup></b></dd>
 					<dt>Вс:</dt>  <dd>выходной</dd>
 				</dl>
-
 			</div>
+			<br style="clear: both;"/>
 			<p class="notification">Приём online-заказов через <a href="#">корзину</a> на сайте — круглосуточно и ежедневно.</p>
 		</div>
 
@@ -390,31 +424,20 @@
 				<li><a href="#">Каталог автомобильных дисков</a></li>	
 			</ul>
 			<ul class="s_nav-services">
-				<li>
-					<a href="#">Шиномонтаж</a>
-					<a href="#">Варианты оплаты</a>
-				</li>
-				<li>
-					<a href="#">Сезонное хранение</a>
-					<a href="#">Доставка</a>
+				<li><a href="#">Шиномонтаж</a></li>
+				<li><a href="#">Варианты оплаты</a></li>
+				<li><a href="#">Сезонное хранение</a></li>
+				<li><a href="#">Доставка</a></li>
 				</li>
 			</ul>
 		</div>
 
 		<div class="addon-basic_nav">
 			<ul class="b_nav">
-				<li>
-					<a href="#">О компании</a>
-					<a href="#">Контакты</a>
-					<a class="ico-sales" href="#">Скидки</a>
-					<a class="ico-offers" href="#">Акции</a>
-				</li>
-				<li>
-					<a href="#">Вакансии</a>
-					<a href="#">Направлления продаж</a>
-					<a href="#">Информация для клиентов</a>
-					<a href="#">Бренды</a>
-				</li>
+				<li><a href="#">О компании</a></li> 	<li><a href="#">Вакансии</a></li>
+				<li><a href="#">Контакты</a></li>			<li><a href="#">Направлления продаж</a></li>
+				<li class="ico-sales"><a href="#">Скидки</a></li><li><a href="#">Информация для клиентов</a></li>
+				<li class="ico-offers"><a href="#">Акции</a></li><li><a href="#">Бренды</a></li>
 			</ul>
 		</div>
 	</div>
@@ -480,8 +503,33 @@ $$(".tab a").addEvent('click', function(event){
 	if (old_tab == new_tab) return;
 	old_tab.removeClass('active');
 	$(old_tab.get('tab') + "_selector").style.display = 'none';
-	new_tab.addClass('active');
+	$(new_tab).addClass('active');
 	$(new_tab.get('tab') + "_selector").style.display = '';
+	event.preventDefault();
+});
+
+$$("#accordion .panel").addEvent('click', function(event){
+	var old = $$("#accordion  .panel.active")[0];
+	if (old == this) return;
+	old.removeClass('active');
+	this.addClass('active');
+	$($(old).getNext()).tween('width', 0);
+	$(this.getNext()).tween('width', 350);
+	event.preventDefault();
+});
+
+$$(".amount-selector .inc-amount").addEvent('click', function(event){
+	var input = this.getNext(".amount-number");
+	var val = parseInt(input.value) + 1;
+	if (val > 99) val = 99;
+	input.value = val;
+	event.preventDefault();
+});
+$$(".amount-selector .dec-amount").addEvent('click', function(event){
+	var input = this.getNext(".amount-number");
+	var val = parseInt(input.value) - 1;
+	if (val < 1) val = 1;
+	input.value = val;
 	event.preventDefault();
 });
 -->

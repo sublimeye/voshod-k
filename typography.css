@@ -77,20 +77,61 @@ a:active {}
 #news .piece_of_news .date { color: #3d3f76; }
 
 .article h1 { color: black; font-size: 24px; text-align: center; }
-.article p { font-size: 12px; }
+.article p { font-size: 12px; text-indent: 1em; text-align: justify; }
 .article p:first-letter { color: #932222; }
+
+.product-details .properties div { text-align: center; }
+.product-details .properties .index span,
+.product-details .properties .size span { font-size: 12px; color: gray;}
+.product-details .properties .size big { font-size: 18px; color: #333;}
+.product-details .properties .size big b { color: #933;}
+.product-details .properties .index big { color: #3e407a;}
+
+.product-actions .amount-selector span,
+.product-actions .price,
+.product-actions .emdash { line-height: 51px; }
+.product-actions .amount-selector span {color: #222; font-size: 14px; text-shadow: 0 1px 0 #aaa; }
+.product-heading { color: white; font-size: 16px; text-shadow: 0 1px 0 #1b1d4c; line-height:34px; text-align: center; }
+.product-actions .price { color: #222; font-size: 14px; text-shadow: 0 1px 0 #aaa; }
+.product-actions .price big { color: white; font-size: 20px; text-shadow: 0 1px 0 #4b4a4a; }
+
+.product-actions .amount-selector .amount-number { font-size: 16px; text-align: right; text-shadow: 0 1px 0 white; }
+
+.p-item .btn-buy { font-size: 24px; color: #982828; box-shadow: 0 30px 15px -15px rgba(247, 247, 247, 0.25) inset; }
+.p-item .btn-buy:after {
+	content: "Купить";
+	color: transparent;
+	display: block;
+	position: absolute;
+	margin-top: -32px;
+	z-index: 100;
+	box-shadow: 0 20px 3px rgba(247, 247, 247, 0.3) inset;
+}
+.p-item .availability { font-size: 12px; }
+.p-item .availability-present .present { color: #135a0c; }
+.p-item .availability-no .amount { color: #693838; }
 
 #footer-navigation { font-size: 11px; }
 #footer-navigation b { font-weight: bold; }
-#footer-navigation .go_to_cart, #footer-navigation .go_to_cart a { color:#ab7979; }
-#footer-navigation .catalogs a { color:#932424; }
-#footer-navigation .menu_parts a { color:#3c409e; }
-#footer-navigation .more_menu_parts a { color: #616161; }
+#footer-navigation .notification,
+#footer-navigation .notification a { color: #ab7979; }
+#footer-navigation .column_contacts,
+#footer-navigation .column_contacts a { color: #595dbb; }
+#footer-navigation .office-info a.contacts_link { color: #29a52f; }
 
-#footer-navigation .copyright { color:#333; font-size: 11px; text-align: left; line-height: 15px; }
-#footer-navigation .disclaimer { color:#b9b9b9; font-size: 10px; text-align: center; line-height: 15px; }
-#footer-navigation .studio { color:#b9b9b9; font-size: 11px; text-align: right; line-height: 15px; }
-#footer-navigation .name { color:#7d7d7d; text-decoration: none; }
+#footer-navigation .column_time dl { color: #45488f; }
+
+#footer-navigation .s_nav-catalogs a { color: #932424; line-height: 20px; }
+#footer-navigation .s_nav-services a { color: #3c409e; line-height: 20px;  }
+#footer-navigation .b_nav a { color: #616161; line-height: 20px;  }
+
+#footer-navigation .ico-sales { list-style-image: url(img/percent.png); }
+#footer-navigation .ico-offers { list-style-image: url(img/actions.png); }
+
+#footer .copyright { font-size: 11px; color: #333; }
+#footer .notice { font-size: 10px; color: #bbb; }
+#footer .dev { font-size: 11px; color: #999; }
+#footer .dev a { color: #777; }
 
 /* Additional blocks
 --------------------------------*/
