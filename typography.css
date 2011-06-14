@@ -31,11 +31,19 @@ a:active {}
 
 #cart {
 	font-size:11px;
+	text-shadow: 1px 1px 0 white;
 }
 #cart.empty, #header .right {
 	color: #999;
 	text-shadow: 0 1px 1px white;
 }
+#cart.full {
+	color: #932222;
+	text-align: right;
+}
+#cart.full b { font-weight: bold; }
+#cart.full a { color: #3f417d; }
+#cart.full a:after{ content:" →"; position: absolute; }
 .addon_info-links a {
 	color: #6b6b76;
 	font-size: 11px;
@@ -146,3 +154,7 @@ a:active {}
 #search input:focus {
 	outline: 0
 }
+
+.selector_expanded { font-size: 16px; color: #3e4079; }
+.selector_expanded .active { color: #a22222;  }
+label.active { color: #942323; }

@@ -92,6 +92,8 @@ a.header-email:hover {
 	margin-left: 70px;
 	top: 15px;
 }
+#cart.full { margin: 0 0 0 10px; width: 230px; }
+#cart.full img { float: left; margin-top: -20px; }
 #header-left {height: 130px; width: 70px; background:url('img/bg-head.png'); margin: 0 -55px 0 -10px; float:left;}
 #header .right {position:absolute; right: 10px; top: 15px; width: 250px; text-align:right}
 #header #search {position: absolute; right:-10px; width: 224px; height: 26px; background:white; box-shadow: 2px 2px 2px -2px silver inset; margin: 10px 0 0 0;}
@@ -227,15 +229,10 @@ body { background:url('img/bg.gif') repeat top center; min-width: 1160px; }
 .selector .double_slider .bar {
 	position: absolute; top: -2px; height: 5px;
 	background-color: #4f539d;
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#565aac', endColorstr='#3e417b',GradientType=0);
-	background: -o-linear-gradient(top, #565aac 0%,#3e417b 100%);
-	background: -ms-linear-gradient(top, #565aac 0%,#3e417b 100%);
-	background: -moz-linear-gradient(top, #565aac, #3e417b);
-	background: -webkit-linear-gradient(top, #565aac 0%,#3e417b 100%);
-	background: -webkit-gradient(linear, left center, right center, color-stop(0%,#565aac), color-stop(100%,#3e417b));
 	background: linear-gradient(top, #565aac 0%,#3e417b 100%);
 }
 .selector .go{ padding-left: 40px; background: url('img/goods_large_icon.png') left center no-repeat scroll; position: relative; top: 20px; }
+
 #tire_selector .go { background-position: 0 -11px; }
 #disc_selector .go { background-position: 0 -51px; }
 #brand_selector .go { background-position: 0 -80px; padding-top: 10px; padding-left: 60px; }
@@ -470,3 +467,62 @@ body { background:url('img/bg.gif') repeat top center; min-width: 1160px; }
 .product-actions .emdash { position: relative; left:-77px; margin-left:50%; }
 .p-item .availability { clear: left; float: left; margin-left: 10px; }
 .p-item .btn-buy { float: right; margin: 0 12px; }
+
+.selector_expanded {
+	position: absolute;
+	background-color: #f1f1f1;
+	background: linear-gradient(top, #f7f7f7, #ececec);
+	border: 1px solid white;
+	border-width: 1px 0;
+	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.75);
+	filter:
+		progid:DXImageTransform.Microsoft.DropShadow( color='#20000000', offX=3, offY=-2),
+		progid:DXImageTransform.Microsoft.DropShadow( color='#20000000', offX=2, offY=3),
+		progid:DXImageTransform.Microsoft.DropShadow( color='#20000000', offX=-3, offY=2),
+		progid:DXImageTransform.Microsoft.DropShadow( color='#20000000', offX=-2, offY=-3);
+}
+.selector_expanded .option {
+	height: 21px;
+	line-height: 21px;
+	margin: 7px 5px;
+	padding: 0 7px;
+	cursor: pointer; cursor: hand;
+}
+.selector_narrow .option {
+	width: 45px;
+}
+.selector_expanded .angle {
+	position: absolute;
+	left: -5px;
+	top: 10px;
+	width: 10px;
+	height: 10px;
+	transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	background-color: #f1f1f1;
+	box-shadow: 1px 0 5px rgba(0, 0, 0, 0.75);
+}
+.selector_expanded .angle-inner {
+	position: absolute;
+	left: 0;
+	top: 5px;
+	width: 10px;
+	height: 20px;
+	background-color: #f1f1f1;
+}
+.selector_expanded .active { background: white; }
+.selector_expanded table { margin: 0; width: auto; }
+.selector_expanded td { padding: 0; }
+
+.pseudo-select {
+	height: 23px;
+	line-height: 23px;
+	border: 1px solid #bbb;
+	border-radius: 2px;
+	background: white url('img/select-arrow.png') right top no-repeat;
+	padding: 0 25px 0 6px;
+	cursor: pointer; cursor: hand;
+	display: inline-block;
+}
+.pseudo-select { color: #982828; font-size: 16px; text-align: center; }
