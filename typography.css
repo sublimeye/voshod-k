@@ -15,13 +15,12 @@ h6 {font-size: 1.2em}
 
 /*   Links
 --------------------------------*/
-a:link {
+a {
 	color: #06C;
 	text-decoration:underline;
 }
 a:visited {}
 a:hover {
-	color: #09C;
 	text-decoration:none;
 }
 a:active {}
@@ -37,16 +36,24 @@ a:active {}
 	color: #999;
 	text-shadow: 0 1px 1px white;
 }
-
-#header #phone { font-size: 34px; color: black; }
-#header #phone .code { font-size: 19px; }
+.addon_info-links a {
+	color: #6b6b76;
+	font-size: 11px;
+	text-decoration: underline;
+}
+.addon_info-links a:hover {
+	text-decoration: none;
+}
+#header #phone { font-size: 34px; color: #333; }
+#header #phone .code { font-size: 20px; }
 #search-do { color: #6265ae; }
 #menu { font-size: 15px; text-shadow: 0 1px 1px black; text-align: right; }
 #menu a { color: white; text-decoration:none; text-align: center; }
 
 #menu2 a { color: black; font-size: 14px; text-decoration:none; }
 #menu2 .active a { color: #932222; }
-#menu2 .hover a { color: #44478b; }
+#menu2 div:hover a { color: #44478b; }
+#menu2 .active:hover a { color: #932222; }
 
 .tabs .title { color: #666; }
 .tabs { font-size: 23px; line-height: 120%; }
@@ -66,21 +73,31 @@ a:active {}
 #news h2 { color: #949494; font-size: 18px; }
 #all_news { color: #aeafcd; font-size:11px; }
 #news .piece_of_news { color: #585858; font-size:12px; }
-#news .important { color: #a53838; }
+#news .important { color: #a53838; margin-bottom: 22px }
 #news .piece_of_news .date { color: #3d3f76; }
 
-#article h1 { color: black; font-size: 24px; text-align: center; }
-#article p { font-size: 12px; }
-#article p:first-letter { color: #932222; }
+.article h1 { color: black; font-size: 24px; text-align: center; }
+.article p { font-size: 12px; }
+.article p:first-letter { color: #932222; }
 
-#footer { font-size: 11px; }
-#footer b { font-weight: bold; }
-#footer .go_to_cart, #footer .go_to_cart a { color:#ab7979; }
-#footer .catalogs a { color:#932424; }
-#footer .menu_parts a { color:#3c409e; }
-#footer .more_menu_parts a { color: #616161; }
+#footer-navigation { font-size: 11px; }
+#footer-navigation b { font-weight: bold; }
+#footer-navigation .go_to_cart, #footer-navigation .go_to_cart a { color:#ab7979; }
+#footer-navigation .catalogs a { color:#932424; }
+#footer-navigation .menu_parts a { color:#3c409e; }
+#footer-navigation .more_menu_parts a { color: #616161; }
 
-#footer .copyright { color:#333; font-size: 11px; text-align: left; line-height: 15px; }
-#footer .disclaimer { color:#b9b9b9; font-size: 10px; text-align: center; line-height: 15px; }
-#footer .studio { color:#b9b9b9; font-size: 11px; text-align: right; line-height: 15px; }
-#footer .name { color:#7d7d7d; text-decoration: none; }
+#footer-navigation .copyright { color:#333; font-size: 11px; text-align: left; line-height: 15px; }
+#footer-navigation .disclaimer { color:#b9b9b9; font-size: 10px; text-align: center; line-height: 15px; }
+#footer-navigation .studio { color:#b9b9b9; font-size: 11px; text-align: right; line-height: 15px; }
+#footer-navigation .name { color:#7d7d7d; text-decoration: none; }
+
+/* Additional blocks
+--------------------------------*/
+.ico-tick {
+	color: #a52929;
+	font-size: 11px;
+}
+#search input:focus {
+	outline: 0
+}

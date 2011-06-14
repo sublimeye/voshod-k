@@ -12,11 +12,22 @@
 <body>
 
 	<div id="wrapper">
+	<!-- HEADER -->
 		<div id="header">
 			<div id="header-left"></div>
-			<img src="img/logo.png" width="256" height="30" id="logo" alt="" />
-			<div style="color: #666;">Интернет-магазин автомобильных шин и колесных дисков</div>
-			<a href="http://www.voshod-k.ru/">www.voshod-k.ru</a>          <a href="mailto:voshod@voshod-avto.ru">voshod@voshod-avto.ru</a>
+			<a href="#" class="logo">
+				<img src="img/logo.png" width="256" height="30" alt="" />
+				<span class="logo-caption">Интернет-магазин автомобильных шин и колесных дисков</span>
+			</a>
+			<div class="header-sublogo_links">
+				<a class="header-self_link" href="http://www.voshod-k.ru/">www.voshod-k.ru</a>
+				<a class="header-email" href="mailto:voshod@voshod-avto.ru">voshod@voshod-avto.ru</a>
+			</div>
+
+			<div class="addon_info-links">
+				<a href="#">Варианты оплаты</a>
+				<a href="#">Условия доставки</a>
+			</div>
 			<div id="cart" class="empty">Пока ничего не заказано</div>
 			<div class="right">
 				Телефон для заказа и проверки наличия
@@ -24,20 +35,24 @@
 					<span class="code">(495) </span>335-40-10
 				</div>
 				<div id="search">
-					<input name="search" />
-					<a href="#" id="search-do">Найти</a>
+					<form action="#search" method="post">
+						<input name="search" placeholder="Быстрый поиск" tabindex="1" />
+						<a href="#" id="search-do" tabindex="2">Найти</a>
+					</form>
 				</div>
 			</div>
 		</div>
+	<!--MAIN NAVIGATION _ menu1-->
 		<ul id="menu">
 			<li id="menu_actions"><div><a href="#">АКЦИИ и СКИДКИ</a></div></li>
 			<li id="menu_tire_cat" class="active"><div><a href="#">Каталог шин</a></div></li>
 			<li id="menu_disc_cat"><div><a href="#">Каталог дисков</a></div></li>
 			<li id="menu_from_model"><div><a href="#">Подбор шин и дисков по марке автомобиля</a></div></li>
 		</ul>
+	<!-- Sub-Navigation -->
 		<ul id="menu2">
 			<li><div><a href="#">О компании</a></div></li>
-			<li><div class="hover"><a href="#">Варианты оплаты</a></div></li>
+			<li><div><a href="#">Варианты оплаты</a></div></li>
 			<li><div><a href="#">Доставка</a></div></li>
 			<li><div class="active"><a href="#">Шиномонтаж</a></div></li>
 			<li><div><a href="#">Сезонное хранение</a></div></li>
@@ -46,10 +61,10 @@
 			<li><div><a href="#">Акции</a></div></li>
 			<li><div><a href="#">Контакты</a></div></li>
 		</ul>
-		<div id="body">
-			<div class="columns">
-				<div class="left">
-					<!-- ВЫБОР ТОВАРОВ -->
+
+	<div class="main">
+		<div class="interactive-blocks">
+				<!--Быстрый подбор товаров-->
 					<div id="selector_wrapper">
 						<div class="tabs">
 							<span class="title">Быстый подбор</span>
@@ -57,7 +72,7 @@
 							<div class="tab" tab="disc"><div><a href="#">дисков</a></div></div>
 							<div class="tab" tab="brand"><div><a href="#">по марке авто</a></div></div>
 						</div>
-						<!-- ШИНЫ -->
+						<!-- Шины -->
 						<div id="tire_selector" class="selector">
 							<table>
 							<tr>
@@ -120,7 +135,7 @@
 							</tr>
 							</table>
 						</div>
-						<!-- ДИСКИ -->
+						<!-- Диски -->
 						<div id="disc_selector" class="selector" style="display: none;">
 							<table>
 							<tr>
@@ -225,39 +240,9 @@
 							</tr>
 							</table>
 						</div>
-					</div>
-					<!-- NEWS -->
-					<div id="news">
-						<div class="banners">
-							<img src="img/banner-1.jpg" width="186" height="121" alt="" />
-							<img src="img/banner-2.jpg" width="186" height="121" alt="" />
-							<img src="img/banner-3.jpg" width="186" height="121" alt="" />
-						</div>
-						<div class="text">
-							<h2>Новости</h2>
-							<a href="#" id="all_news">Посмотреть все новости</a>
-							<div class="piece_of_news important">
-								<div class="date">25 мая</div>
-								График работы региональных представительств магазина в период майских праздников
-							</div>
-							<div class="piece_of_news">
-								<div class="date">22 мая</div>
-								Yokohama начала реализацию первого этапа расширения производства на Филиппинах.
-							</div>
-							<div class="piece_of_news">
-								<div class="date">12 апреля</div>
-								11 форум Michelin Challenge Bibendum
-							</div>
-							<div class="piece_of_news">
-								<div class="date">3 апреля</div>
-								Открытие представительства в г.Казань
-							</div>
-						</div>
-					</div>
+					</div><!--// быстрый подбор-->
 
-				</div>
-				<div class="right">
-					<!-- ACCORDION -->
+					<!--Accordion -->
 					<div id="accordion">
 						<a class="panel" href="#">
 							<span class="label label_new">new</span>
@@ -290,18 +275,159 @@
 							<span class="text">Специальные цены на литые диски</span>
 						</a>
 					</div>
-					<!-- ARTCILE -->
-					<div id="article">
-						<h1>Для изучающих теор.мех</h1>
-						<p>Движение ротора преобразует гироинтегратор, от чего сильно зависит величина систематического ухода гироскопа. Устойчивость перманентно искажает гравитационный крен, что явно следует из прецессионных уравнений движения. Нутация, в соответствии с основным законом динамики, апериодичен. <a href="#">Инерциальная навигация</a> интегрирует резонансный волчок, используя имеющиеся в этом случае первые интегралы. </p>
-						<p>Малое колебание даёт более простую систему дифференциальных уравнений, если исключить уход гироскопа, основываясь на предыдущих вычислениях. Время набора максимальной <a href="#">скорости методически</a> переворачивает штопор, даже если не учитывать выбег гироскопа.</p>
-						<p>Сила трансформирует гироскоп, что обусловлено малыми углами карданового подвеса. Точность курса, в силу третьего закона Ньютона, требует большего внимания к анализу ошибок, которые даёт твердый гироскопический маятник, даже если рамки подвеса буду ориентированы под прямым углом. <a href="#">Последнее векторное равенство</a> заставляет перейти к более сложной системе дифференциальных уравнений, если добавить волчок, не забывая о том, что интенсивность диссипативных сил, характеризующаяся величиной коэффициента D, должна лежать в определённых пределах.</p>
+
+		</div>
+		<div class="main_content-layout">
+			<div class="article">
+				<h1>Для изучающих теор.мех</h1>
+				<p>Движение ротора преобразует гироинтегратор, от чего сильно зависит величина систематического ухода гироскопа. Устойчивость перманентно искажает гравитационный крен, что явно следует из прецессионных уравнений движения. Нутация, в соответствии с основным законом динамики, апериодичен. <a href="#">Инерциальная навигация</a> интегрирует резонансный волчок, используя имеющиеся в этом случае первые интегралы. </p>
+				<p>Малое колебание даёт более простую систему дифференциальных уравнений, если исключить уход гироскопа, основываясь на предыдущих вычислениях. Время набора максимальной <a href="#">скорости методически</a> переворачивает штопор, даже если не учитывать выбег гироскопа.</p>
+				<p>Сила трансформирует гироскоп, что обусловлено малыми углами карданового подвеса. Точность курса, в силу третьего закона Ньютона, требует большего внимания к анализу ошибок, которые даёт твердый гироскопический маятник, даже если рамки подвеса буду ориентированы под прямым углом. <a href="#">Последнее векторное равенство</a> заставляет перейти к более сложной системе дифференциальных уравнений, если добавить волчок, не забывая о том, что интенсивность диссипативных сил, характеризующаяся величиной коэффициента D, должна лежать в определённых пределах.</p>
+
+				<table class="three-columns-grid">
+					<tr>
+						<td><a class="ico-tick" href="#"><i></i>Быстрая ссылка на группу каталога</a></td>
+						<td><a class="ico-tick" href="#"><i></i>Ссылка на товар</a></td>
+						<td><a class="ico-tick" href="#"><i></i>Ссылка на условия акции</a></td>
+					</tr>
+				</table>
+			</div>
+
+			<!-- news -->
+			<div id="news">
+				<div class="banners">
+					<img src="img/banner-1.jpg" width="186" height="121" alt="" />
+					<img src="img/banner-2.jpg" width="186" height="121" alt="" />
+					<img src="img/banner-3.jpg" width="186" height="121" alt="" />
+				</div>
+				<div class="text">
+					<h2>Новости</h2>
+					<a href="#" id="all_news">Посмотреть все новости</a>
+					<div class="piece_of_news important">
+						<div class="date">25 мая</div>
+						График работы региональных представительств магазина в период майских праздников
+					</div>
+					<div class="piece_of_news">
+						<div class="date">22 мая</div>
+						Yokohama начала реализацию первого этапа расширения производства на Филиппинах.
+					</div>
+					<div class="piece_of_news">
+						<div class="date">12 апреля</div>
+						11 форум Michelin Challenge Bibendum
+					</div>
+					<div class="piece_of_news">
+						<div class="date">3 апреля</div>
+						Открытие представительства в г.Казань
 					</div>
 				</div>
-				<br style="clear:both;"/>
-			</div>
+			</div><!--//news-->
 		</div>
-		<div id="footer">
+
+		<ul class="product-list">
+
+			<li class="p-item">
+				<div class="brand"><img src="" alt="" /></div>
+				<h2 class="product-heading">Geolandar I/T (GO72)</h2>
+				<div class="product-details">
+					<div class="fig"><img src="" alt="" /></div>
+					<ul class="product-specifics">
+						<li class="car-type"><i class="ico"></i></li>
+						<li class="weather-type"><i class="ico"></i></li>
+						<li class="addon-type"><i class="ico"></i></li>
+					</ul>
+					<div class="properties">
+						<div class="size"><span>Размер</span><big><b>265</b>/<b>45R21</b></big></div>
+						<div class="index"><span>Индекс</span><big>104Q</big></div>
+						<div class="info-flyer">
+							<i class="ico">?</i>
+						</div>
+					</div>
+				</div>
+
+				<div class="product-actions">
+					<div class="amount-selector">
+						<a class="inc-amount" href="#">+</a>
+						<a class="dec-amount" href="#">-</a>
+						<input type="text" class="amount-number" /><span>шт.</span>
+					</div>
+					<div>&mdash;</div>
+					<div class="price"><big>9 506</big> руб.</div>
+				</div>
+				<div class="availability">
+					В наличии менее 4 шт.
+				</div>
+				<a class="btn-buy" href="#"><!--but-btn text--></a>
+			</li>
+
+		</ul><!--//product-list-->
+	</div><!--//main-->
+
+	<div id="footer-navigation">
+		<div class="office-info">
+			<div class="column">
+				<h5>Контактная информация:</h5>
+				<dl style="color:#7b7ca8;">
+					<dt>Телефон:</dt>  <dd>(495) <b>335 4010</b></dd>
+					<dt>E-mail:</dt>  <dd><a href="mailto:voshod@voshod-avto.ru">voshod@voshod-avto.ru</a></dd>
+				</dl>
+				<a href="#" style="color:#29a52f;">Контакты и схема проезда</a>
+			</div>
+			<div class="column">
+				<h5>Время работы офисов:</h5>
+				<dl>
+					<dt>Пн-Пт:</dt>  <dd>с <b>9<sup>00</sup></b> до <b>17<sup>00</sup></b></dd>
+					<dt>Сб:</dt>  <dd>с <b>9<sup>00</sup></b> до <b>15<sup>00</sup></b></dd>
+					<dt>Вс:</dt>  <dd>выходной</dd>
+				</dl>
+
+			</div>
+			<p class="notification">Приём online-заказов через <a href="#">корзину</a> на сайте — круглосуточно и ежедневно.</p>
+		</div>
+
+		<div class="addon-services_nav">
+			<ul class="s_nav-catalogs">
+				<li><a href="#">Каталог автомобильных шин</a></li>
+				<li><a href="#">Каталог автомобильных дисков</a></li>	
+			</ul>
+			<ul class="s_nav-services">
+				<li>
+					<a href="#">Шиномонтаж</a>
+					<a href="#">Варианты оплаты</a>
+				</li>
+				<li>
+					<a href="#">Сезонное хранение</a>
+					<a href="#">Доставка</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="addon-basic_nav">
+			<ul class="b_nav">
+				<li>
+					<a href="#">О компании</a>
+					<a href="#">Контакты</a>
+					<a class="ico-sales" href="#">Скидки</a>
+					<a class="ico-offers" href="#">Акции</a>
+				</li>
+				<li>
+					<a href="#">Вакансии</a>
+					<a href="#">Направлления продаж</a>
+					<a href="#">Информация для клиентов</a>
+					<a href="#">Бренды</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div id="footer">
+		<div class="copyright">
+			&copy; 2001— 2011, ООО &laquo;Восход-К Авто&raquo;
+		</div>
+		<div class="notice">Вся информация на сайте носит справочный характер и не является публичной офертой.</div>
+		<div class="dev">Designed by <a href="#">PAIVE Media Group</a></div>
+	</div>
+
+<!--		<div id="footer">
 			<div style="float: left;">
 				Контактная информация:
 				<dl style="color:#7b7ca8;">
@@ -318,7 +444,7 @@
 					<dt>Вс:</dt>  <dd>выходной</dd>
 				</dl>
 			</div>
-			<span class="go_to_cart">Приём online-заказов через <a href="#">корзину</a> на сайте — круглосуточно и ежедневно.</span>
+			<span class="go_to_cart"></span>
 
 			<table>
 				<tr class="catalogs"><td colspan="2"><a href="#">Каталог автомобильных шин</a></td></tr>
@@ -342,7 +468,9 @@
 				<td class="studio">Designed by <a href="#" class="name">PAIVE Media Group</a></td>
 			</tr></table>
 		</div>
-	</div>
+	-->
+
+	</div><!--//wrapper-->
 
 <script type="text/javascript" src="/js/mootools-1.3.js"></script>
 <script type="text/javascript"><!--
