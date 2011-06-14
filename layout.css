@@ -389,6 +389,7 @@ body { background:url('img/bg.gif') repeat top center; min-width: 1160px; }
 --------------------------------*/
 .product-list {
 	clear: both;
+	overflow: hidden;
 	list-style: none;
 	background: white url('img/catalogue-bg.jpg') no-repeat left top;
 	padding: 17px 4px 60px;
