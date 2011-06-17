@@ -6,7 +6,7 @@ body {font: 14px/1.4 Tahoma, Geneva, sans-serif}
 
 h1,h2,h3,h4,h5,h6 {font-weight: normal}
 
-h1 {font-size: 2.2em}
+h1 {font-size: 24px}
 h2 {font-size: 2em}
 h3 {font-size: 1.8em}
 h4 {font-size: 1.6em}
@@ -64,7 +64,7 @@ a:active {}
 #menu2 .active:hover a { color: #932222; }
 
 .tabs .title { color: #666; }
-.tabs { font-size: 23px; line-height: 120%; }
+.tabs { font-size: 24px; line-height: 120%; }
 .tabs .tab a { color: #424586; }
 .tabs .active a { color: #a83b3b; }
 .tabs .tab a { text-decoration:none; }
@@ -87,7 +87,7 @@ a:active {}
 #news .important a {color: #a53838;}
 #news .piece_of_news .date { color: #3d3f76; }
 
-.article h1 { color: black; font-size: 24px; text-align: center; }
+.article h1 { color: black; text-align: center; }
 .article p {
 	line-height: 1.2; font-size: 12px; text-indent: 1.5em; text-align: justify; }
 .article p:first-letter { color: #932222; }
@@ -158,3 +158,19 @@ a:active {}
 .selector_expanded { font-size: 16px; color: #3e4079; }
 .selector_expanded .active { color: #a22222;  }
 label.active { color: #942323; }
+
+/* catalogue */
+.advice-disc { font-size: 12px; color: #666; }
+.advice-disc h3.matching { font-size: 14px; text-align: center; }
+.advice-disc a { color: #3c3e76; }
+.advice-disc .extra li { line-height: 25px; }
+
+.where-list .small { color: #952424; }
+.where-list { font-size: 11px; line-height: 22px; color: black; }
+.where-list a { color: #ae2323; }
+.where-list .buy { text-align: right; }
+
+.catalogue-panel_bottom .top-link a {
+	font-size: 12px;
+    color: #777;
+}

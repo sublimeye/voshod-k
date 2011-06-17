@@ -6,7 +6,9 @@
 .product-actions .emdash { left:-93px; }
 #footer { overflow-x: hidden; clear: right;}
 #menu2 { overflow-x: hidden; }
-#menu2 li {
+#menu2 li,
+#catalogue .panel .paginator .page,
+.catalogue-panel .sorting .column {
 	zoom: 1;
 	*display: inline;
 }
