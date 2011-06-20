@@ -12,3 +12,6 @@
 	zoom: 1;
 	*display: inline;
 }
+.large-tooltip-inner .number div { padding-left: 6px; }
+#selector_wrapper h1 { height: 50px; }
+.selector label { float: left; }

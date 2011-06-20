@@ -88,16 +88,17 @@ a:active {}
 #news .piece_of_news .date { color: #3d3f76; }
 
 .article h1 { color: black; text-align: center; }
-.article p {
-	line-height: 1.2; font-size: 12px; text-indent: 1.5em; text-align: justify; }
-.article p:first-letter { color: #932222; }
+p { line-height: 1.2; font-size: 12px; text-indent: 1.5em; text-align: justify; }
+p:first-letter { color: #932222; }
 
-.product-details .properties div { text-align: center; }
-.product-details .properties .index span,
-.product-details .properties .size span { font-size: 12px; color: gray;}
-.product-details .properties .size big { font-size: 18px; color: #333;}
-.product-details .properties .size big b { color: #933;}
-.product-details .properties .index big { color: #3e407a;}
+.properties div { text-align: center; }
+.properties .index span,
+.properties .size span { font-size: 12px; color: gray;}
+.properties .size big { font-size: 18px; color: #333;}
+.properties .size big b { color: #933;}
+.properties .index big { font-size: 18px; color: #3e407a; }
+.properties .price_per_item { font-size: 14px; color:#222; }
+.properties .price_per_item big { font-size: 20px; color: #4b4a4a; }
 
 .product-actions .amount-selector span,
 .product-actions .price,
@@ -109,8 +110,8 @@ a:active {}
 
 .product-actions .amount-selector .amount-number { font-size: 16px; text-align: right; text-shadow: 0 1px 0 white; }
 
-.p-item .btn-buy { font-size: 24px; color: #982828; box-shadow: 0 30px 15px -15px rgba(247, 247, 247, 0.25) inset; }
-.p-item .btn-buy:after {
+.btn-buy { font-size: 24px; color: #982828; box-shadow: 0 30px 15px -15px rgba(247, 247, 247, 0.25) inset; }
+/*.btn-buy:after {
 	content: "Купить";
 	color: transparent;
 	display: block;
@@ -118,10 +119,12 @@ a:active {}
 	margin-top: -32px;
 	z-index: 100;
 	box-shadow: 0 20px 3px rgba(247, 247, 247, 0.3) inset;
-}
-.p-item .availability { font-size: 12px; }
-.p-item .availability-present .present { color: #135a0c; }
-.p-item .availability-no .amount { color: #693838; }
+}*/
+.availability { font-size: 12px; }
+.availability-present .present { color: #135a0c; }
+.availability-no .amount { color: #693838; }
+.availability .amount a { color: #3f3f3f; border-bottom: 1px dashed #3f3f3f; text-decoration: none; }
+
 
 #footer-navigation { font-size: 11px; }
 #footer-navigation b { font-weight: bold; }
@@ -174,3 +177,32 @@ label.active { color: #942323; }
 	font-size: 12px;
     color: #777;
 }
+
+/* tovar */
+.catalogue-blocks .good-description h1 { text-align:center; color: white; }
+
+.tovar-list { font-size: 18px; text-align: center; }
+.tovar-list .header { color:gray; font-size: 12px; }
+.breadcrubms { text-align: center; color: #6f6e6e; font-size: 12px; line-height: 46px; }
+
+.large-tooltip-inner td { white-space: nowrap; font-size: 11px; color: #333; text-align: left; }
+.large-tooltip-inner .metro { color: #3e407a; font-size: 12px; }
+.large-tooltip-inner .buy { color: #ae2323; }
+.large-tooltip-inner .number { text-align: right; }
+.large-tooltip-inner .small { color: #952424; }
+
+/* catalog2 */
+.advice-list { text-align: center; }
+.advice-list h1 { color: #222; line-height: 60px; }
+.advice-list td { line-height: 30px; }
+.advice-list .disc-details { font-size: 12px; color: #616161; }
+.advice-list .axle { font-size: 12px; color: gray; }
+.advice-list .basic,
+.advice-list .replace { color: #474864; }
+.advice-list .tuning { color: #921935; }
+.advice-list .basic a,
+.advice-list .replace a { font-size: 14px; color: #383a97; }
+.advice-list .tuning a { color: #97384a; }
+
+.selecting_extra-info h3 { font-size: 14px; color: #666; text-align: center; }
+.selecting_extra-info a { font-size: 12px; color: #3c3e75; }

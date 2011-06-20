@@ -76,7 +76,6 @@
 		<div class="interactive-blocks">
 				<!--Быстрый подбор товаров-->
 					<div id="selector_wrapper">
-						<h1>Подбор шин по размерам</h1>
 						<div class="tabs">
 							<span class="title">Быстый подбор</span>
 							<div class="tab active" tab="tire"><div><a href="#">шин</a></div></div>
@@ -151,13 +150,13 @@
 							<table>
 							<tr>
 								<td><a href="#" class="icon_help"></a></td>
-								<td>Ширина обода, дюймы</td>
-								<td><select name="width">
+								<td><label for="disc_width">Ширина обода, дюймы</label></td>
+								<td><select name="disc_width" id="disc_width">
 									<option value="205">205</option>
 									<option value="190">190</option>
 								</select></td>
-								<td>Производитель
-									<select name="creator" id="creator">
+								<td><label for="disc_creator">Производитель</label>
+									<select name="disc_creator" id="disc_creator">
 									<option value="1">Bridgestone</option>
 									<option value="2" selected="selected">Continental</option>
 									<option value="3">Goodyear</option>
@@ -167,8 +166,8 @@
 								</select></td>
 							</tr><tr>
 								<td><a href="#" class="icon_help"></a></td>
-								<td>Диаметр, дюймы</td>
-								<td><select name="height">
+								<td><label for="disc_height">Диаметр, дюймы</label></td>
+								<td><select name="disc_height" id="disc_height">
 									<option value="75">75</option>
 									<option value="65">65</option>
 									<option value="55">55</option>
@@ -214,7 +213,7 @@
 							<table>
 							<tr>
 								<td><a href="#" class="icon_help"></a></td>
-								<td>Марка авто<select name="brand">
+								<td><label for="brand">Марка авто</label><select name="brand" id="brand">
 									<option value="1">Acura</option>
 									<option value="2" selected="selected">Aston Martin</option>
 									<option value="3">Audi</option>
@@ -224,21 +223,21 @@
 									<option value="7">Cadiallac</option>
 								</select></td>
 								<td></td>
-								<td>Модель: <select name="model">
+								<td><label for="model">Модель:</label> <select name="model" id="model">
 									<option value="1">VANQUISH A</option>
 									<option value="2" selected="selected">VANQUISH S</option>
 									<option value="3">VANQUISH X</option>
 								</select></td>
 							</tr><tr>
 								<td><a href="#" class="icon_help"></a></td>
-								<td>год выпуска<select name="year">
+								<td><label for="year">год выпуска</label><select name="year" id="year">
 									<option value="2008">2008</option>
 									<option value="2009">2009</option>
 									<option value="2010">2010</option>
 									<option value="2011">2011</option>
 								</select></td>
 								<td><a href="#" class="icon_help"></a></td>
-								<td>Модификация: <select name="mod">
+								<td><label for="mod">Модификация:</label><select name="mod" id="mod">
 									<option value="1">5.5i</option>
 									<option value="2">5.5TD</option>
 									<option value="3">6.0i</option>

@@ -213,13 +213,30 @@ body { background:url('img/bg.gif') repeat top center; min-width: 1160px; }
 	margin-left: 560px;
 	background: #F7F7F7;
 }
+.main_fixed-column {
+	margin-left: 190px;
+	overflow: visible;
+}
+.main_fixed-column .catalogue-blocks {
+	width: 100%;
+	float: right;
+}
+.main_fixed-column .sidebar {
+    margin-left: -190px;
+    position: relative;
+}
 
-.selector { background:white; border: 1px solid #e5e5e5; border-width: 1px 0 0 1px; clear: both; height: 207px; }
-.selector select { width: 60px; }
-.selector #creator { width: auto; }
+.selector { background:white; border: 1px solid #e5e5e5; border-width: 1px 0 0 1px; clear: both; width: 100%; }
+#tire_selector { height: 207px; }
+#tire_width, #tire_height, #tire_radius { width: 60px; }
+.selector select { float: right; margin-right: 20px; }
+#tire_selector select,
+#disc_selector select { margin-bottom: -4px; }
+#brand_selector select { margin-top: 8px; }
+#tire_creator { margin: 10px 0 -10px; }
 .selector table { margin-top: 20px; width: 100%; }
 .selector td { padding: 0 5px; line-height: 40px; }
-.selector .icon_help { display: block; width: 12px; height: 12px; background: url('img/question.gif') center; }
+.icon_help { display: inline-block; width: 12px; height: 12px; background: url('img/question.gif') center; }
 .selector .double_slider { position: relative; width: 243px; height: 1px; background: #8b8b8b; }
 .selector .double_slider .label { position: absolute; width: 48px; margin-left: -24px; top: -20px; line-height: 16px; }
 .selector .double_slider .tick { position: absolute; left: 0; width: 1px; height: 9px; background: #8b8b8b; margin-left: 24px;  }
@@ -231,11 +248,12 @@ body { background:url('img/bg.gif') repeat top center; min-width: 1160px; }
 	background-color: #4f539d;
 	background: linear-gradient(top, #565aac 0%,#3e417b 100%);
 }
-.selector .go{ padding-left: 40px; background: url('img/goods_large_icon.png') left -11px no-repeat scroll; position: relative; top: 20px; }
+.selector .go{ padding-left: 40px; background: url('img/goods_large_icon.png') left -11px no-repeat scroll; }
+#tire_selector .go{ position: relative; top: 20px; }
 
 #tire_selector .go { background-position: 0 -11px; }
 #disc_selector .go { background-position: 0 -51px; }
-#brand_selector .go { background-position: 0 -80px; padding-top: 10px; padding-left: 60px; }
+#brand_selector .go { background-position: 0 -80px; padding: 10px 0 0 60px; float: right; margin: 0 20px 50px 0; }
 
  input.price { width: 3.5em; border: 1px solid #bababa; border-radius: 2px; }
 
@@ -319,13 +337,12 @@ body { background:url('img/bg.gif') repeat top center; min-width: 1160px; }
 	clear: left;
 }
 
-.article {
+.main_content-layout .article {
 	float: right;
 	margin-left: 30px;
 }
-.article h1 {
-	margin: 25px 0 5px 0; }
-.article p { margin: 0 0 8px 0; padding: 0 1em; }
+.article h1 { margin: 25px 0 5px 0; }
+p { margin: 0 0 8px 0; padding: 0 1em; }
 
 /*   4. HEADER
 --------------------------------*/
@@ -440,15 +457,18 @@ body { background:url('img/bg.gif') repeat top center; min-width: 1160px; }
 .product-details { height: 186px; position: relative; }
 .product-details .fig { width: 140px; height: 138px; line-height: 138px; text-align: center; }
 .product-details .fig img { max-width: 140px; max-height: 138px; display: inline-block; margin: 0 auto; vertical-align: middle; }
-.product-details .product-specifics li { position: absolute; list-style-type: none; }
-.product-details .product-specifics .car-type { left: 143px; top: 9px; }
+.product-specifics { position: absolute; }
+.product-details .product-specifics { left: 140px; top: 0; }
+.catalogue-blocks .product-specifics { right: 45px; top: 0; }
+.product-specifics li { list-style-type: none; position: absolute; }
+.product-specifics .car-type { left: 3px; top: 9px; }
 	.vehicle_icon { display: block; width: 33px; height: 18px; background: url('img/vehicle_icons.png') no-repeat; }
 	.vehicle_icon_auto { background-position: 0 0; }
 	.vehicle_icon_truck { background-position: 0 -18px; }
 	.vehicle_icon_moto { background-position: 0 -36px; }
 	
-.product-details .product-specifics .weather-type { left: 144px; top: 39px; }
-.product-details .product-specifics .addon-type { left: 144px; top: 76px; }
+.product-specifics .weather-type { left: 4px; top: 39px; }
+.product-specifics .addon-type { left: 4px; top: 76px; }
 
 .product-details .properties { position: relative; left: 15px; }
 .product-details .properties div { float:left; width: 50%; }
@@ -460,6 +480,7 @@ body { background:url('img/bg.gif') repeat top center; min-width: 1160px; }
 }
 
 .product-actions {
+	width: 200px;
 	height: 51px;
 	background: #777 url('img/x-bg-slice.png') 0 -98px repeat-x;
 }
@@ -566,6 +587,7 @@ body { background:url('img/bg.gif') repeat top center; min-width: 1160px; }
 .sidebar li {
 	background: url('img/y-bg.png') left top no-repeat;
 	padding-left: 20px;
+	list-style-type: none;
 }
 .sidebar li:first-child {
 	background: none;
@@ -648,7 +670,7 @@ h2 .items-amount {
 	float: right;
 }
 /* catalogue */
-#selector_wrapper h1 { color: #666; margin: 10px -30px 5px 25px; }
+#selector_wrapper h1 { color: #666; padding: 10px 0 5px 25px; }
 
 .advice-disc .goods-wrapper { padding-left: 580px; }
 .advice-disc .goods { width: 366px; height: 58px; margin: 12px 0; position: relative; left: -25px; background: url('img/advised-goods.png'); }
@@ -745,3 +767,71 @@ h2 .items-amount {
 }
 
 .catalogue-bottom { height: 35px; border-top: 1px solid white; background: #fdfdfd; margin-top: -8px; }
+
+
+/* tovar */
+
+.catalogue-blocks .good-large { float:left; text-align: center; }
+.catalogue-blocks .good-large .header { height: 46px; }
+.catalogue-blocks .good-large .header img { vertical-align: middle; }
+.catalogue-blocks .good-large .photo { position:relative; }
+.catalogue-blocks .good-description { overflow: hidden; }
+.catalogue-blocks .good-description h1 { background: url('img/x-bg-slice.png') 0 -149px repeat-x; line-height: 34px; height: 34px; margin-bottom: 30px; }
+
+.tovar-list { width: 100%; margin-top: 15px; }
+.tovar-list .properties { background: url('img/x-bg-slice.png') 0 -414px repeat-x; }
+.tovar-list .header { background: none; }
+.tovar-list td { vertical-align: middle; height: 68px; }
+.tovar-list .header td { height: 30px; }
+.tovar-list .product-actions { margin: 0 auto; }
+.tovar-list .product-actions .emdash { left: -70px; margin-left: 0; }
+
+.large-tooltip { position: relative; left: -100px; top: -3px; }
+.large-tooltip-inner,
+.large-tooltip-inner .left,
+.large-tooltip-inner .right,
+.large-tooltip-inner .bottom,
+.large-tooltip-inner .corner { position: absolute; background: url('img/tooltip-large.png'); }
+.large-tooltip-inner { position: absolute; background-position: center -5px; padding-top: 20px; margin-left: -10%; }
+.large-tooltip-inner .left { width: 10px; left: -10px; top: -20px; bottom:0; background-position: -20px 15px; }
+.large-tooltip-inner .right { width: 10px; right: -10px; top: -20px; bottom:0; background-position: 30px 15px; }
+.large-tooltip-inner .bottom { width: 100%; height: 20px; bottom: -20px; left: -10px; background-position: -20px 40px; }
+.large-tooltip-inner .corner { width: 20px; height: 20px; right: -20px; background-position: 40px 40px; }
+
+.large-tooltip-inner td { padding: 3px 10px; height: auto; }
+.large-tooltip-inner .address {
+	padding-right: 0;
+}
+.large-tooltip-inner .address div {
+	overflow: hidden;
+	padding-right: 8px;
+}
+.large-tooltip-inner .dots {
+	display: inline-block;
+	width: 100%;
+	background: url('img/dots.png') bottom repeat-x;
+	height: 10px;
+}
+.large-tooltip-inner .number {
+	padding-left: 0;
+}
+.large-tooltip-inner .number div {
+	padding-left: 5px;
+	direction: rtl;
+    overflow: hidden;
+}
+.large-tooltip-inner .number .dots { margin-right: 1px; }
+
+/* catalog2 */
+.advice-list { width: 100%; background-color: #f7f7f7; margin: 25px 0 50px; clear: both; }
+.advice-list .disc-details .icon_help { margin: 0 12px -2px 0; }
+.advice-list .section { background-color: #fafafa; }
+.advice-list .spacer { height: 60px; }
+.advice-list .middle { background: url('img/y-bg.png') -184px 0 repeat-y; width: 7px; }
+.advice-list .middle div { position: relative; }
+.advice-list .middle .icon_help { position: absolute; left: -4px; top: -13px; border: 2px solid #f7f7f7; }
+
+.selecting_extra-info { float: right: width: 100%; }
+.selecting_extra-info h3 { padding: 20px 0; }
+.selecting_extra-info ul { padding-left: 2em; }
+.selecting_extra-info li { list-style-image: url("img/diamonds.png"); }

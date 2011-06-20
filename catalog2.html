@@ -6,7 +6,13 @@
 	<title>Шины!</title>
 	<link href='layout.css' rel="stylesheet" type="text/css" />
 	<link href='typography.css' rel="stylesheet" type="text/css" />
-	<!--[if lte IE 7]><link rel="stylesheet" type="text/css" href='ie.css' /><![endif]-->
+	<!--[if lte IE 7]>
+		<link rel="stylesheet" type="text/css" href='ie.css' />
+		<![endif]-->
+	<!--[if lte IE 8]><style type="text/css">
+		.selector_expanded .angle { display: none; }
+		.selector_expanded .angle-inner { display: none; }
+	</style><![endif]-->
 	<link rel="Shortcut Icon" type="image/x-icon" href="" />
 </head>
 <body>
@@ -28,7 +34,11 @@
 				<a href="#">Варианты оплаты</a>
 				<a href="#">Условия доставки</a>
 			</div>
-			<div id="cart" class="empty">Пока ничего не заказано</div>
+			<div id="cart" class="full">
+				<img src="img/forklift.png"/>
+				Заказано: <b>4</b> шины и <b>4</b> диска<br/>
+				<a href="#">Оформить заказ</a>
+			</div>
 			<div class="right">
 				Телефон для заказа и проверки наличия
 				<div id="phone">
@@ -63,81 +73,206 @@
 		</ul>
 
 	<div class="main">
-		<div id="sidebar">
-			<h3 class="catalog-title">Производители шин</h3>
-			<ul class="catalog-list">
-				<li><a href="">Altenzo</a></li>
-				<li><a href="">Barum</a></li>
-				<li><a class="current" href="">Bridgestone</a></li>
-				<li><a href="">Aarum</a></li>
-				<li><a href="">Earum</a></li>
-				<li><a href="">Xarum</a></li>
-				<li><a href="">Baarum</a></li>
-				<li><a href="">Brgestone</a></li>
-				<li><a href="">Brstone</a></li>
-				<li><a href="">Augestone</a></li>
-				<li><a href="">Xdsdgestone</a></li>
-			</ul>
-		</div><!--//sidebar-->
-
-		<!-- блок Подбора шин и дисков + блок дополнительной информации -->
-		<div class="catalog-rec-wrapper">
-			<div class="product_selector-wrapper">
-				<h2>Подбор шин и дисков по марке авто</h2>
-				<div>Блок с селектами и говном. Враппер можно назвать как-то иначе , чтоб было одно название как и на других блоках с подобными селектами</div>
+		<div class="main_fixed-column">
+			<div class="sidebar">
+				<h3 class="catalog-title">Производители шин</h3>
+				<ul class="catalog-list">
+					<li><a href="#">Altenzo</a></li>
+					<li><a href="#">Barum</a></li>
+					<li><a href="#">BF Goodrich</a></li>
+					<li><a href="#">Bridgestone</a></li>
+					<li><a class="current" href="#">Continental</a></li>
+					<li><a href="#">Cooper</a></li>
+					<li><a href="#">Dunlop</a></li>
+					<li><a href="#">Gislaved</a></li>
+					<li><a href="#">Goodyear</a></li>
+					<li><a href="#">GT Radial</a></li>
+					<li><a href="#">Hankook</a></li>
+					<li><a href="#">Interco</a></li>
+					<li><a href="#">Kumho</a></li>
+					<li><a href="#">Michelin</a></li>
+					<li><a href="#">Mickey Thompson</a></li>
+					<li><a href="#">Nokian</a></li>
+					<li><a href="#">Nokian-Nordman</a></li>
+					<li><a href="#">Pirelli</a></li>
+					<li><a href="#">Procomp</a></li>
+					<li><a href="#">Sava</a></li>
+					<li><a href="#">Simex</a></li>
+					<li><a href="#">Tigar</a></li>
+					<li><a href="#">Toyo</a></li>
+					<li><a href="#">Yokohama</a></li>
+				</ul><!--//catalog-list-->
 			</div>
-
-			<div class="additional-info">
-				<h3>Дополнительная информация</h3>
-				<ul>
-					<li><a href="">Что такое «Заводская комплектация»?</a></li>
-					<li><a href="">Что такое «Варианты замены»?</a></li>
-					<li><a href="">Что такое «Шины/диски для тюнинга»?</a></li>
-					<li><a href="">Почему у разных дисков есть общие параметры?</a></li>
-					<li><a href="">Что такое модификация - в форме подбора?</a></li>
-				</ul>
+			<div class="catalogue-blocks">
+				<div style="margin-left:580px;">
+				<div id="selector_wrapper" style="margin-left:-580px;">
+					<h1>Подбор шин и дисков по марке авто</h1>
+					<div id="brand_selector" class="selector">
+						<table>
+						<tr>
+							<td><a href="#" class="icon_help"></a></td>
+							<td><label for="brand">Марка авто</label><select name="brand" id="brand">
+								<option value="1">Acura</option>
+								<option value="2" selected="selected">Aston Martin</option>
+								<option value="3">Audi</option>
+								<option value="4">Bentley</option>
+								<option value="5">BMW</option>
+								<option value="6">Buick</option>
+								<option value="7">Cadiallac</option>
+							</select></td>
+							<td></td>
+							<td><label for="model">Модель:</label> <select name="model" id="model">
+								<option value="1">VANQUISH A</option>
+								<option value="2" selected="selected">VANQUISH S</option>
+								<option value="3">VANQUISH X</option>
+							</select></td>
+						</tr><tr>
+							<td><a href="#" class="icon_help"></a></td>
+							<td><label for="year">год выпуска</label><select name="year" id="year">
+								<option value="2008">2008</option>
+								<option value="2009">2009</option>
+								<option value="2010">2010</option>
+								<option value="2011">2011</option>
+							</select></td>
+							<td><a href="#" class="icon_help"></a></td>
+							<td><label for="mod">Модификация:</label><select name="mod" id="mod">
+								<option value="1">5.5i</option>
+								<option value="2">5.5TD</option>
+								<option value="3">6.0i</option>
+								<option value="4">6.0TD</option>
+							</select></td>
+						</tr><tr>
+							<td colspan="6">
+								<a href="#" class="go">Подобрать шины и диски</a>
+							</td>
+						</tr>
+						</table>
+					</div>
+				</div>
+				<div class="selecting_extra-info">
+					<h3>Дополнительная информация</h3>
+					<ul>
+						<li><a href="#">Что такое «Заводская комплектация»?</a></li>
+						<li><a href="#">Что такое «Варианты замены»?</a></li>
+						<li><a href="#">Что такое «Шины/диски для тюнинга»?</a></li>
+						<li><a href="#">Почему у разных дисков есть общие параметры?</a></li>
+						<li><a href="#">Что такое модификация - в форме подбора?</a></li>
+						<li><a href="#">Почему для передней и задней осей параметры шин/дисков отличаются?</a></li>
+						<li><a href="#">Зачем ставить шины/диски большого радиуса?</a></li>
+					</ul>
+				</div>
+				</div>
+				<table class="advice-list">
+					<tr><td colspan="2"><h1>Рекомендуемые шины</h1></td>
+							<td class="middle"></td>
+							<td colspan="2"><h1>Рекомендуемые диски</h1></td>
+					</tr>
+					<tr><td colspan="2"></td>
+							<td class="middle"></td>
+							<td colspan="2" class="disc-details"><a class="icon_help" href="#"></a> PCD: 5*120,   Dia: 72,6 мм,   Болт: 12*1,5</td>
+					</tr>
+					<tr class="section basic">
+							<td colspan="2">Заводская комплектация</td>
+							<td class="middle"><div><a class="icon_help" href="#"></a></div></td>
+							<td colspan="2">Заводская комплектация</td>
+					</tr>
+					<tr class="axle">
+							<td>Передняя ось</td><td>Задняя ось</td>
+							<td class="middle"></td>
+							<td>Передняя ось</td><td>Задняя ось</td>
+					</tr>
+					<tr class="basic">
+							<td><a href="#">215/40 R18</a></td><td><a href="#">245/35 R18</a></td>
+							<td class="middle"></td>
+							<td><a href="#">8 x 18 ET40</a></td><td><a href="#">9 x 18 ET40</a></td>
+					</tr>
+					<tr class="spacer"><td colspan="2"></td><td class="middle"></td><td colspan="2"></td></tr>
+					<tr class="section replace">
+							<td colspan="2">Варианты замены</td>
+							<td class="middle"><div><a class="icon_help" href="#"></a></div></td>
+							<td colspan="2">Варианты замены</td>
+					</tr>
+					<tr class="axle">
+							<td>Передняя ось</td><td>Задняя ось</td>
+							<td class="middle"></td>
+							<td>Передняя ось</td><td>Задняя ось</td>
+					</tr>
+					<tr class="replace">
+							<td><a href="#">215/40 R18</a></td><td><a href="#">245/35 R18</a></td>
+							<td class="middle"></td>
+							<td><a href="#">8 x 18 ET40</a></td><td><a href="#">9 x 18 ET40</a></td>
+					</tr>
+					<tr class="replace">
+							<td><a href="#">215/40 R18</a></td><td><a href="#">245/35 R18</a></td>
+							<td class="middle"></td>
+							<td><a href="#">8 x 18 ET40</a></td><td><a href="#">9 x 18 ET40</a></td>
+					</tr>
+					<tr class="replace">
+							<td colspan="2"><a href="#">215/40 R18</a></td>
+							<td class="middle"></td>
+							<td colspan="2"><a href="#">9 x 18 ET40</a></td>
+					</tr>
+					<tr class="replace">
+							<td><a href="#">215/40 R18</a></td><td><a href="#">245/35 R18</a></td>
+							<td class="middle"></td>
+							<td><a href="#">8 x 18 ET40</a></td><td><a href="#">9 x 18 ET40</a></td>
+					</tr>
+					<tr class="spacer"><td colspan="2"></td><td class="middle"></td><td colspan="2"></td></tr>
+					<tr class="section tuning">
+							<td colspan="2">Шины для тюнинга</td>
+							<td class="middle"><div><a class="icon_help" href="#"></a></div></td>
+							<td colspan="2">Диски для тюнинга</td>
+					</tr>
+					<tr class="axle">
+							<td>Передняя ось</td><td>Задняя ось</td>
+							<td class="middle"></td>
+							<td>Передняя ось</td><td>Задняя ось</td>
+					</tr>
+					<tr class="tuning">
+							<td><a href="#">215/40 R18</a></td><td><a href="#">245/35 R18</a></td>
+							<td class="middle"></td>
+							<td><a href="#">8 x 18 ET40</a></td><td><a href="#">9 x 18 ET40</a></td>
+					</tr>
+					<tr class="tuning">
+							<td><a href="#">215/40 R18</a></td><td><a href="#">245/35 R18</a></td>
+							<td class="middle"></td>
+							<td><a href="#">8 x 18 ET40</a></td><td><a href="#">9 x 18 ET40</a></td>
+					</tr>
+					<tr class="tuning">
+							<td colspan="2"><a href="#">215/40 R18</a></td>
+							<td class="middle"></td>
+							<td colspan="2"><a href="#">9 x 18 ET40</a></td>
+					</tr>
+					<tr class="tuning">
+							<td><a href="#">215/40 R18</a></td><td><a href="#">245/35 R18</a></td>
+							<td class="middle"></td>
+							<td><a href="#">8 x 18 ET40</a></td><td><a href="#">9 x 18 ET40</a></td>
+					</tr>
+					<tr class="spacer"><td colspan="2"></td><td class="middle"></td><td colspan="2"></td></tr>
+				</table>
 			</div>
 		</div>
-
-		<!-- Рекомендуемые шины \ Рекомендуемы диски  -->
-		<table class="catalog-rec-grid">
-			<thead>
-			<tr>
-				<th><h2>Рекомендуемые шины</h2></th>
-				<th></th>
-				<th>Рекомендуемые диски</th>
-			</tr>
-			</thead>
-			<tbody>
-			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			</tbody>
-		</table>
-
 	</div><!--//main-->
 
 	<div id="footer-navigation">
 		<div class="office-info">
-			<div class="column">
+			<div class="column column_contacts">
 				<h5>Контактная информация:</h5>
-				<dl style="color:#7b7ca8;">
+				<dl>
 					<dt>Телефон:</dt>  <dd>(495) <b>335 4010</b></dd>
 					<dt>E-mail:</dt>  <dd><a href="mailto:voshod@voshod-avto.ru">voshod@voshod-avto.ru</a></dd>
 				</dl>
-				<a href="#" style="color:#29a52f;">Контакты и схема проезда</a>
+				<a href="#" class="contacts_link">Контакты и схема проезда</a>
 			</div>
-			<div class="column">
+			<div class="column column_time">
 				<h5>Время работы офисов:</h5>
 				<dl>
 					<dt>Пн-Пт:</dt>  <dd>с <b>9<sup>00</sup></b> до <b>17<sup>00</sup></b></dd>
 					<dt>Сб:</dt>  <dd>с <b>9<sup>00</sup></b> до <b>15<sup>00</sup></b></dd>
 					<dt>Вс:</dt>  <dd>выходной</dd>
 				</dl>
-
 			</div>
+			<br style="clear: both;"/>
 			<p class="notification">Приём online-заказов через <a href="#">корзину</a> на сайте — круглосуточно и ежедневно.</p>
 		</div>
 
@@ -147,31 +282,19 @@
 				<li><a href="#">Каталог автомобильных дисков</a></li>	
 			</ul>
 			<ul class="s_nav-services">
-				<li>
-					<a href="#">Шиномонтаж</a>
-					<a href="#">Варианты оплаты</a>
-				</li>
-				<li>
-					<a href="#">Сезонное хранение</a>
-					<a href="#">Доставка</a>
-				</li>
+				<li><a href="#">Шиномонтаж</a></li>
+				<li><a href="#">Варианты оплаты</a></li>
+				<li><a href="#">Сезонное хранение</a></li>
+				<li><a href="#">Доставка</a></li>
 			</ul>
 		</div>
 
 		<div class="addon-basic_nav">
 			<ul class="b_nav">
-				<li>
-					<a href="#">О компании</a>
-					<a href="#">Контакты</a>
-					<a class="ico-sales" href="#">Скидки</a>
-					<a class="ico-offers" href="#">Акции</a>
-				</li>
-				<li>
-					<a href="#">Вакансии</a>
-					<a href="#">Направлления продаж</a>
-					<a href="#">Информация для клиентов</a>
-					<a href="#">Бренды</a>
-				</li>
+				<li><a href="#">О компании</a></li> 	<li><a href="#">Вакансии</a></li>
+				<li><a href="#">Контакты</a></li>			<li><a href="#">Направлления продаж</a></li>
+				<li class="ico-sales"><a href="#">Скидки</a></li><li><a href="#">Информация для клиентов</a></li>
+				<li class="ico-offers"><a href="#">Акции</a></li><li><a href="#">Бренды</a></li>
 			</ul>
 		</div>
 	</div>
@@ -184,18 +307,21 @@
 		<div class="dev">Designed by <a href="#">PAIVE Media Group</a></div>
 	</div>
 
-	</div><!--//wrapper-->
-
-<script type="text/javascript" src="/js/mootools-1.3.js"></script>
+</div><!--//wrapper-->
+<script type="text/javascript" src="js/mootools-1.3.js"></script>
 <script type="text/javascript"><!--
-$$(".tab a").addEvent('click', function(event){
-	var old_tab = $$(".tab.active")[0];
-	var new_tab = this.parentNode.parentNode;
-	if (old_tab == new_tab) return;
-	old_tab.removeClass('active');
-	$(old_tab.get('tab') + "_selector").style.display = 'none';
-	new_tab.addClass('active');
-	$(new_tab.get('tab') + "_selector").style.display = '';
+$$(".amount-selector .inc-amount").addEvent('click', function(event){
+	var input = this.getNext(".amount-number");
+	var val = parseInt(input.value) + 1;
+	if (val > 99) val = 99;
+	input.value = val;
+	event.preventDefault();
+});
+$$(".amount-selector .dec-amount").addEvent('click', function(event){
+	var input = this.getNext(".amount-number");
+	var val = parseInt(input.value) - 1;
+	if (val < 1) val = 1;
+	input.value = val;
 	event.preventDefault();
 });
 -->
