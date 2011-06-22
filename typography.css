@@ -74,8 +74,10 @@ a:active {}
 .selector .double_slider .label { color:#a4a4a4; font-size: 10px; text-align: center; }
 .selector .go{ color:#982828; font-size: 24px; line-height: 36px; }
 
-#accordion .panel .text { font-size: 12px; color: #666; line-height: 37px; text-shadow: 1px 1px 1px white; }
-#accordion .active .text { color: #932222; }
+#accordion .panel .text { font-size: 12px; line-height: 37px; text-shadow: 1px 1px 1px white; }
+#accordion a { color: #666; text-decoration: none; }
+#accordion a:hover { color: #424586; }
+#accordion a.active { color: #982828; }
 #accordion .label { font-size: 11px; color: white; text-align: center; }
 #accordion h2 {
 	font-size:36px;

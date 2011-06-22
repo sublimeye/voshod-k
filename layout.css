@@ -283,14 +283,17 @@ body { background:url('img/bg.gif') repeat top center; min-width: 1160px; }
 #accordion .view .text h1 { font-size: 36px; }
 #accordion .view .text p { font-size: 12px; }
 
-#accordion .panel .text { width: 37px; height: 240px; }
-#accordion .active .text { background-position: -37px 0; }
-#accordion .panel .text1 { background-image: url(img/text1.png); }
-#accordion .panel .text2 { background-image: url(img/text2.png); }
-#accordion .panel .text3 { background-image: url(img/text3.png); }
-#accordion .panel .text4 { background-image: url(img/text4.png); }
-#accordion .panel .text5 { background-image: url(img/text5.png); }
-#accordion .panel .text6 { background-image: url(img/text6.png); }
+#accordion .panel .text {
+	width: 240px; height: 240px;
+	-moz-transform: rotate(270deg);
+    -moz-transform-origin: 117px 118px;
+	-webkit-transform: rotate(270deg);
+    -webkit-transform-origin: 117px 118px;
+	filter: progid:DXImageTransform.Microsoft.Matrix( M11=0, M12=1, M21=-1, M22=0, Dx=0, Dy=235);
+}
+
+#accordion .panel { background-image: url(img/text-bg.png); }
+#accordion .active { background-position: -37px 0; }
 
 #accordion .panel .label { width: 37px; height: 20px; background: url(img/labels.png); }
 #accordion .panel .label_new { background-position: 0 0; }

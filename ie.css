@@ -16,3 +16,5 @@
 #selector_wrapper h1 { height: 50px; }
 .selector label { float: left; }
 .advice-list .middle .icon_help { left: -4px; top: -13px; }
+#accordion .panel { overflow: hidden; }
+#accordion .panel .text { cursor: hand; }
