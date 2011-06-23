@@ -122,13 +122,20 @@ a.header-email:hover {
 	display: block;
 	padding: 20px 0 0;
 	margin-top: -20px;
-	background: url('img/menu_tires.png') left top no-repeat scroll;
+	background: url('img/menu-bg.png') repeat-x;
 	bottom: -1px;
 	position: relative;
 }
+#menu_actions a { background-position: 0 -1px; }
+#menu_actions.active a, #menu_actions:hover a { background-position: 0 -71px; }
+#menu_tire_cat a { background-position: 0 -141px; }
+#menu_tire_cat.active a, #menu_tire_cat:hover a { background-position: 0 -211px; }
+#menu_disc_cat a { background-position: 0 -281px; }
+#menu_disc_cat.active a, #menu_disc_cat:hover a { background-position: 0 -351px; }
+#menu_from_model a { background-position: 0 -421px; }
+#menu_from_model.active a, #menu_from_model:hover a { background-position: 0 -491px; }
 #menu .active div,
 #menu :hover div {
-	background: #a93d3d url('img/x-bg-slice.png') 0 -49px repeat-x;
 	box-shadow: 2px 2px 4px -2px rgba(0, 0, 0, 0.2) inset;
 	border-color: #9d2e2e rgba(3, 13, 59, 0.18) #6e1313 rgba(255, 255, 255, 0.12);
 	border-color: #9d2e2e #89373f #6e1313 #b96161;
@@ -137,9 +144,9 @@ a.header-email:hover {
 #menu_tire_cat { width: 19.5%; }
 #menu_disc_cat { width: 21.5%; }
 #menu_from_model { width: 43%; }
-#menu_tire_cat a { background-position: 20px -131px; padding-left: 95px; }
-#menu_disc_cat a { background-position: 20px -231px; padding-left: 95px; }
-#menu_from_model a { background-position: 20px -331px; padding-left: 115px; }
+#menu_tire_cat a { padding-left: 95px; }
+#menu_disc_cat a { padding-left: 95px; }
+#menu_from_model a { padding-left: 115px; }
 
 #menu2 {
 	clear: both;
