@@ -188,7 +188,7 @@ label.active { color: #942323; }
 
 .tovar-list { font-size: 18px; text-align: center; }
 .tovar-list .header { color:gray; font-size: 12px; }
-.breadcrubms { text-align: center; color: #6f6e6e; font-size: 12px; line-height: 46px; }
+.breadcrubms { text-align: center; color: #6f6e6e; font-size: 12px; line-height: 38px; }
 
 .large-tooltip-inner td { white-space: nowrap; font-size: 11px; color: #333; text-align: left; }
 .large-tooltip-inner .metro { color: #3e407a; font-size: 12px; }

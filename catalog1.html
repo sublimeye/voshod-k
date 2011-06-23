@@ -297,6 +297,7 @@
 						<div class="emdash">&mdash;</div>
 						<div class="value"><big>9 506</big> руб.</div>
 					</div>
+					<input type="hidden" name="price" value="9506"/>
 				</div>
 				<div class="availability availability-present">
 					<div class="present">В наличии</div>
@@ -420,110 +421,8 @@
 		</table>
 		<div class="angle"></div><div class="angle-inner"></div>
 	</div>
-<script type="text/javascript" src="mootools-1.3.js"></script>
-<script type="text/javascript"><!--
-$$(".tab a").addEvent('click', function(event){
-	var old_tab = $$(".tab.active")[0];
-	var new_tab = this.parentNode.parentNode;
-	if (old_tab == new_tab) return;
-	old_tab.removeClass('active');
-	$(old_tab.get('tab') + "_selector").style.display = 'none';
-	$(new_tab).addClass('active');
-	$(new_tab.get('tab') + "_selector").style.display = '';
-	event.preventDefault();
-});
-
-$$("#accordion .panel").addEvent('click', function(event){
-	var old = $$("#accordion  .panel.active")[0];
-	if (old == this) return;
-	old.removeClass('active');
-	this.addClass('active');
-	$($(old).getNext()).tween('width', 0);
-	$(this.getNext()).tween('width', 350);
-	event.preventDefault();
-});
-
-$$(".amount-selector .inc-amount").addEvent('click', function(event){
-	var input = this.getNext(".amount-number");
-	var val = parseInt(input.value) + 1;
-	if (val > 99) val = 99;
-	input.value = val;
-	event.preventDefault();
-});
-$$(".amount-selector .dec-amount").addEvent('click', function(event){
-	var input = this.getNext(".amount-number");
-	var val = parseInt(input.value) - 1;
-	if (val < 1) val = 1;
-	input.value = val;
-	event.preventDefault();
-});
-
-function open_select(event) {
-	var id = this.get('data');
-	var select = $(id);
-	var wrapper = $$(".selector_expanded")[0];
-	var table = $$(".selector_expanded table")[0];
-	table.set('bound_select', id);
-	
-	var label = $($$("label[for="+id+"]")[0]);
-	label.addClass('active');
-	var off = label.getOffsets();
-	wrapper.style.left = off.x + label.offsetWidth + 16 + 'px';
-	wrapper.style.top = off.y - 8 + 'px';
-
-	for (var i = table.rows.length-1; i >= 0; i--) table.deleteRow(i);
-	var opt_cnt = select.options.length;
-	var sel_idx = select.selectedIndex;
-	var row = null;
-	var isNarrow = true;
-	for (var i = 0; i < opt_cnt; i++) {
-		var cidx = i % 4;
-		if (!cidx) row = table.insertRow(i/4);
-		var cell = row.insertCell(cidx);
-		var option = select.options[i];
-		if (option.innerHTML.length > 6) isNarrow = false;
-		var div = new Element('div', { 'class': "option", html: option.innerHTML, val: option.value });
-		if (i == sel_idx) div.addClass('active');
-		$(cell).grab(div);
-	}
-	if (isNarrow) table.addClass('selector_narrow');
-	wrapper.style.display = '';
-	event.stopPropagation();
-}
-
-function close_select() {
-	var wrapper = $$(".selector_expanded")[0];
-	wrapper.style.display = 'none';
-	var table = $(wrapper).getElement("table");
-	table.removeClass('selector_narrow');
-	var id = table.get('bound_select');
-	$($$("label[for="+id+"]")[0]).removeClass('active');
-}
-
-$$(".selector_expanded table")[0].addEvent('click', function(event){
-	var id = this.get('bound_select');
-	var target = $(event.target);
-	if (target.className != "option") return;
-	$(id).value = target.get('val');
-	$($$(".selector_expanded table .active")[0]).removeClass('active');
-	target.addClass('active');
-	$$(".pseudo-select[data="+id+"]")[0].innerHTML = target.innerHTML;
-	close_select();
-});
-
-$$("select").each(function(select){
-	var lablels = $$("label[for="+select.id+"]");
-	if (!lablels.length) return;
-	select.style.display = 'none';
-	var subst =  new Element("div", {'class': "pseudo-select", html: select.options[select.selectedIndex].innerHTML, data: select.id });
-	subst.addEvent('click', open_select);
-	$(select.parentNode).grab(subst);
-});
-
-document.addEvent('click', function(){
-	close_select();
-});
--->
-</script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/price-blocks.js"></script>
+<script type="text/javascript" src="js/custom-select.js"></script>
 </body>
 </html>

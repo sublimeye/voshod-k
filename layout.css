@@ -574,7 +574,11 @@ p { margin: 0 0 8px 0; padding: 0 1em; }
 	padding: 0 25px 0 6px;
 	cursor: pointer;
 	display: inline-block;
+	float: right;
+	margin: 7px 15px 0 0;
 }
+#tire_selector .pseudo-select,
+#disc_selector .pseudo-select { margin: 7px 15px -7px 0; }
 .pseudo-select { color: #982828; font-size: 16px; text-align: center; }
 
 /* catalog1_page
@@ -795,7 +799,7 @@ h2 .items-amount {
 /* tovar */
 
 .catalogue-blocks .good-large { float:left; text-align: center; }
-.catalogue-blocks .good-large .header { height: 46px; }
+.catalogue-blocks .good-large .header { height: 38px; }
 .catalogue-blocks .good-large .header img { vertical-align: middle; }
 .catalogue-blocks .good-large .photo { position:relative; }
 .catalogue-blocks .good-description { overflow: hidden; }
